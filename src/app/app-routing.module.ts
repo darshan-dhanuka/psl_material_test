@@ -22,6 +22,7 @@ import { AboutMissionComponent } from './about-mission/about-mission.component';
 import { AboutVisionComponent } from './about-vision/about-vision.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { PlayerProfileComponent } from './player-profile/player-profile.component';
+import { PslTeamComponent } from './psl-team/psl-team.component';
 
 
 const routes: Routes = [
@@ -48,7 +49,8 @@ const routes: Routes = [
   {path: 'about-vision', component: AboutVisionComponent},
   {path: 'faqs', component: FaqsComponent},
   {path: 'blogs', component: BlogsComponent},
-  {path: 'player-profile', component: PlayerProfileComponent}
+  {path: 'player-profile', component: PlayerProfileComponent},
+  {path: 'psl-teams', component:  PslTeamComponent}
 
 
 ];

@@ -37,6 +37,7 @@ import { BlogsComponent } from './blogs/blogs.component';
 import { PlayerProfileComponent } from './player-profile/player-profile.component';
 import { Season1Component } from './season1/season1.component';
 import { Season2Component } from './season2/season2.component';
+import { PslTeamComponent } from './psl-team/psl-team.component';
 
 @NgModule({
   declarations: [
