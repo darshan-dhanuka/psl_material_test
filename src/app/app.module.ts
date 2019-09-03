@@ -70,7 +70,8 @@ import { PslTeamComponent } from './psl-team/psl-team.component';
     BlogsComponent,
     PlayerProfileComponent,
     Season1Component,
-    Season2Component
+    Season2Component,
+    PslTeamComponent
   ],
   imports: [
     BrowserModule,
