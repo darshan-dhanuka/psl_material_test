@@ -1,0 +1,60 @@
+<div class="container-fluid" style="
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background: rgba(90, 90, 90, 0.5);
+z-index: 99999999;
+width:100% !important">
+    <div class="row">
+        <div class="col-md-6 mt-5 mx-auto style-login">
+            <div class="popup-header">
+                <div class="close-popup"><a href="javascript: void(0)"><i class="fa fa-window-close login-close" aria-hidden="true" (click)="toggle()"></i></a></div>
+            </div>
+            <h2 class="text-center">Sign in</h2>
+            <form name="form" (ngSubmit)="f.form.valid && login()"  #f="ngForm" novalidate style="margin: 40px;">
+                
+                <div class="form-group">
+                    <label for="email" class="loginlabel">Email address</label>
+                    <input type="email" class="form-control" name="email" placeholder="Enter email" [(ngModel)]="credentials.email" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email>
+                    <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+                        <div *ngIf="email.errors.required">Email is required</div>
+                        <div *ngIf="email.errors.email">Email must be a valid email address</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="loginlabel">Password</label>
+                    <input type="password" class="form-control" name="password" placeholder="Password" [(ngModel)]="credentials.password" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" required >
+                    <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
+                        <div *ngIf="password.errors.required">Password is required</div>
+                    </div>
+                </div>
+                <div ><button type="submit" class="btn btn-success btn-block login-btn">Sign in</button></div>
+                <a href="javascript:void(0);" *ngIf="!auth.isLoggedIn()" style="float:left" class="nav-link" (click)="togglefp()">Forgot password</a>
+                <a href="javascript:void(0);" *ngIf="!auth.isLoggedIn()" style="float:right" class="nav-link" (click)="togglereg()">Not a User? Register Now</a>
+
+            </form>
+            
+            		
+            <div class="text-center social-btn" style="margin: 40px;">
+                <div class="or-seperator"><i>or</i></div>
+                <a href="#" class="btn btn-primary btn-block"><i class="fa fa-facebook"></i> Sign in with <b>Facebook</b></a>
+                <a href="javascript:void(0);" (click)="signInWithGoogle()" class="btn btn-danger btn-block"><i class="fa fa-google"></i> Sign in with <b>Google</b></a>
+            </div>
+
+            <!--div class=" bg-transparent text-center">
+                <div *ngIf="user" class="card text-center">
+                        <button class="btn btn-danger" (click)="signOut()">Sign out</button>
+                    <img style="width:20%"class="card-img-top img-responsive photo" src="{{ user.photoUrl }}">
+                    <div >
+                        <h4 class="card-title">{{ user.name }}</h4>
+                        <p class="card-text">{{ user.email }}</p>
+                    </div>
+                </div>
+            </div-->
+        </div>
+
+    </div>
+    
+</div>

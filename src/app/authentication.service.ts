@@ -37,6 +37,7 @@ export interface TokenPayload {
   address: string
   dob: string
   terms: boolean
+  referral_code: string				   
 }
 
 @Injectable()
@@ -80,7 +81,7 @@ export class AuthenticationService {
   }
 
   public register(user: TokenPayload): Observable<any> {
-      console.log(user);
+      //console.log(user);
       return this.http.post(`http://localhost/register/public/api/register`, user, {
         headers: {'Content-Type': 'application/json'}
       })
@@ -139,8 +140,35 @@ export class AuthenticationService {
     catchError(this.handleError)
   );
 }
+ public fp(f): Observable<any> {
+  return this.http.post(`http://localhost/register/public/api/forgetpw`, f, {
+    headers: {'Content-Type': 'application/json'}
+  });
+}
+ public otpfunc(f): Observable<any> {
+  return this.http.post(`http://localhost/register/public/api/verify_otp`, f, {
+    headers: {'Content-Type': 'application/json'}
+  });
+}
+ public rpfunc(f): Observable<any> {
+  return this.http.post(`http://localhost/register/public/api/reset_password`, f, {
+    headers: {'Content-Type': 'application/json'}
+  });
+}
 
+ public sociallogin(user): Observable<any> {
+ 
+   //console.log("statedid====="+stateId)
+  // return this.http.post('http://localhost/register/public/api/social/',
+  //  { headers: {'Content-Type': 'application/json'}
+  // }).pipe(
+  //  catchError(this.handleError)
+  //);
 
+  return this.http.post(`http://localhost/register/public/api/social`, user, {
+        headers: {'Content-Type': 'application/json'}
+      });
+}
 private handleError(error: HttpErrorResponse) {
   if (error.error instanceof ErrorEvent) {
     // A client-side or network error occurred. Handle it accordingly.

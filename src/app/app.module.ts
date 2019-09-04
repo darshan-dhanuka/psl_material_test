@@ -11,9 +11,12 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { AboutComponent } from './about/about.component';
 import { TermsComponent } from './terms/terms.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';													  
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { SocialLoginModule } from 'angularx-social-login';
+import { AuthServiceConfig, GoogleLoginProvider  } from 'angularx-social-login';			
 import { AndhraBulletsComponent } from './andhra-bullets/andhra-bullets.component';
 import { BengaluruWarriorsComponent } from './bengaluru-warriors/bengaluru-warriors.component';
 import { ChennaiThalaivasComponent } from './chennai-thalaivas/chennai-thalaivas.component';
@@ -47,7 +50,26 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { PreviousSeasonsComponent } from './previous-seasons/previous-seasons.component';
 
 
-
+import { BsDatepickerModule} from 'ngx-bootstrap/datepicker';
+import { ReactiveFormsModule } from '@angular/forms';																			  
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';																					  
+const config = new AuthServiceConfig([
+  {
+    id: GoogleLoginProvider.PROVIDER_ID,
+    provider: new GoogleLoginProvider('230059724929-7cusacc7jktuajmot7tjl0adu0u01co7.apps.googleusercontent.com')
+  },
+  // {
+  //   id: FacebookLoginProvider.PROVIDER_ID,
+  //   provider: new FacebookLoginProvider('561602290896109')
+  // },
+  // {
+  //   id: LinkedInLoginProvider.PROVIDER_ID,
+  //   provider: new LinkedInLoginProvider("78iqy5cu2e1fgr")
+  // }
+]);
+export function provideConfig() {
+  return config;
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -87,16 +109,25 @@ import { PreviousSeasonsComponent } from './previous-seasons/previous-seasons.co
     NewsComponent,
     VideosComponent,
     GalleryComponent,
-    PreviousSeasonsComponent
+    PreviousSeasonsComponent,
+	ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-
+	SocialLoginModule,
+    BsDatepickerModule.forRoot(),
+    BrowserAnimationsModule,
+    ReactiveFormsModule			   
   ],
-  providers: [],
+  providers: [AuthenticationService, AuthGuardService,
+    {
+      provide: AuthServiceConfig,
+      useFactory: provideConfig
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

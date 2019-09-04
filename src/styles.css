@@ -1729,7 +1729,325 @@ a.back-to-top:focus {
     margin: 0 auto;
     width: 100%;
 }
+/*----login------------*/
+				   
+ 
 
+.login-form {
+    width: 340px;
+    margin: 30px auto;
+}
+
+.login-form form {
+    margin-bottom: 15px;
+    background: #f7f7f7;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+				
+				 
+			  
+			   
+}
+
+.login-form h2 {
+    margin: 0 0 15px;
+
+			
+						
+}
+
+.login-form .hint-text {
+    color: #777;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.form-control,
+.btn {
+    min-height: 38px;
+    border-radius: 2px;
+}
+
+.login-btn {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.or-seperator {
+    margin: 20px 0 10px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+					 
+					   
+		   
+			  
+			 
+}
+
+.or-seperator i {
+    padding: 0 10px;
+    background: #f7f7f7;
+    position: relative;
+    top: -11px;
+    z-index: 1;
+}
+
+.social-btn .btn {
+    margin: 10px 0;
+    font-size: 15px;
+    text-align: left;
+    line-height: 24px;
+					 
+				   
+				 
+					   
+			   
+}
+
+.social-btn .btn i {
+    float: left;
+    margin: 4px 15px 0 5px;
+    min-width: 15px;
+			   
+}
+
+.input-group-addon .fa {
+    font-size: 18px;
+						
+				   
+				
+}
+
+
+/*------------login------------------*/
+
+/*--//login--*/
+				   
+ 
+
+.style-login {
+    border-radius: 11px;
+    /* background: url(/assets/images/banner6.png) no-repeat 0px 0px; */
+    padding: 15px;
+    background-size: cover;
+    background: #f1f1f1;
+    padding: 30px;
+    overflow-y: auto;
+    height: 580px;
+}
+
+.style-login h1 {
+    color: black !important;
+						  
+}
+
+.loginlabel {
+    color: black !important;
+				
+				 
+					   
+					 
+					   
+			  
+}
+
+.button {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 8px;
+   
+  }										  
+		
+/*-- //nav login button --*/
+					
+					 
+ 
+
+.nav-login-btn {
+    background: none;
+    border: 2px solid #68d6c5;
+    border-radius: 20px;
+    color: #68d6c5;
+    cursor: pointer;
+    /* display: inline-block; */
+    font-weight: 700;
+    font-size: 14px;
+    /* line-height: 2.34; */
+    /* margin: 0; */
+    padding: 8px 20px;
+    text-align: center;
+}
+
+.nav-reg-btn {
+    background: #018e3f;
+    border: 2px solid #42c539;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+										   
+						
+ 
+
+											 
+    /* display: inline-block; */
+    font-weight: 700;
+					  
+    font-size: 14px;
+    /* line-height: 2.34; */
+    /* margin: 0; */
+							   
+						
+								  
+    padding: 8px 20px;
+    text-align: center;
+						   
+								 
+}
+
+												   
+				   
+						   
+						  
+					 
+			   
+ 
+
+/*-- //nav login button --*/
+				
+ 
+
+				   
+					 
+							  
+ 
+
+/*-- Registration --*/
+					 
+					
+ 
+
+.regButton {
+    /*background-color: #4CAF50;
+    Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    width: 35%;
+    border-radius: 30px;
+    outline: none;
+    padding: 15px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 4px 4px rgba(187, 188, 189, 0.5);
+    -webkit-box-shadow: 4px 4px rgba(187, 188, 189, 0.5);
+    -o-box-shadow: 4px 4px rgba(187, 188, 189, 0.5);
+    -moz-box-shadow: 4px 4px rgba(187, 188, 189, 0.5);
+}
+
+					 
+						  
+					 
+			   
+ 
+
+/*-- Registration --*/
+
+					   
+
+/*-- //close-popup --*/
+						
+ 
+
+.close-popup {
+    float: right;
+    font-size: 2rem;
+    line-height: 3rem;
+    padding: 0 3px;
+    cursor: pointer;
+}
+
+.login-close {
+					
+    color: #dc3545;
+					  
+			  
+						
+}
+
+.invalid-val {
+				
+    font-size: 80%;
+    color: #dc3545;
+}
+
+							
+				   
+ 
+
+/*-- //close-popup --*/
+						  
+ 
+
+								  
+				
+					 
+				
+				 
+					  
+				   
+					   
+					   
+				  
+					
+					  
+										
+											 
+												
+										   
+ 
+
+/*-- //terms-popup --*/
+				
+ 
+
+.style-terms {
+    border-radius: 11px;
+    /* background: url(/assets/images/banner6.png) no-repeat 0px 0px; */
+    padding: 15px;
+    background-size: cover;
+    background: #f1f1f1;
+    padding: 30px;
+    position: absolute;
+    top: 0;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    overflow: auto;
+}
+
+.terms-close {
+    color: #dc3545;
+    position: fixed;
+}
+
+												
+						
+ 
+
+/*-- //terms-popup --*/
+	
 
 /* Contact Forme */
 
