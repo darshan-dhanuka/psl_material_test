@@ -24,7 +24,7 @@ import { GujratFalconsComponent } from './gujrat-falcons/gujrat-falcons.componen
 import { HomeComponent } from './home/home.component';
 import { KolkataKingsComponent } from './kolkata-kings/kolkata-kings.component';
 import { LeagueStructureComponent } from './league-structure/league-structure.component';
-import { MediaComponent } from './media/media.component';
+
 import { MumbaiAnchorsComponent } from './mumbai-anchors/mumbai-anchors.component';
 import { PuneSharksComponent } from './pune-sharks/pune-sharks.component';
 import { PunjabBluffersComponent } from './punjab-bluffers/punjab-bluffers.component';
@@ -32,12 +32,21 @@ import { RajasthanTiltersComponent } from './rajasthan-tilters/rajasthan-tilters
 import { AboutMissionComponent } from './about-mission/about-mission.component';
 import { AboutVisionComponent } from './about-vision/about-vision.component';
 import { TeamMembersComponent } from './team-members/team-members.component';
-import { NewMediaComponent } from './new-media/new-media.component';
+
 import { BlogsComponent } from './blogs/blogs.component';
 import { PlayerProfileComponent } from './player-profile/player-profile.component';
 import { Season1Component } from './season1/season1.component';
 import { Season2Component } from './season2/season2.component';
 import { PslTeamComponent } from './psl-team/psl-team.component';
+import { QualifierComponent } from './qualifier/qualifier.component';
+import { ProComponent } from './pro/pro.component';
+import { MentorComponent } from './mentor/mentor.component';
+import { NewsComponent } from './news/news.component';
+import { VideosComponent } from './videos/videos.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { PreviousSeasonsComponent } from './previous-seasons/previous-seasons.component';
+
+
 
 @NgModule({
   declarations: [
@@ -58,7 +67,7 @@ import { PslTeamComponent } from './psl-team/psl-team.component';
     HomeComponent,
     KolkataKingsComponent,
     LeagueStructureComponent,
-    MediaComponent,
+    
     MumbaiAnchorsComponent,
     PuneSharksComponent,
     PunjabBluffersComponent,
@@ -66,12 +75,19 @@ import { PslTeamComponent } from './psl-team/psl-team.component';
     AboutMissionComponent,
     AboutVisionComponent,
     TeamMembersComponent,
-    NewMediaComponent,
+  
     BlogsComponent,
     PlayerProfileComponent,
     Season1Component,
     Season2Component,
-    PslTeamComponent
+    PslTeamComponent,
+    QualifierComponent,
+    ProComponent,
+    MentorComponent,
+    NewsComponent,
+    VideosComponent,
+    GalleryComponent,
+    PreviousSeasonsComponent
   ],
   imports: [
     BrowserModule,

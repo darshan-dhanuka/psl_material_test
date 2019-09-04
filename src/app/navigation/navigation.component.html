@@ -1,5 +1,7 @@
 <!-- Navbar Start -->
+
 <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar">
+
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -12,51 +14,80 @@
             <a href="index.html" class="navbar-brand"><img src="assets/img/logo.png" alt=""></a>
         </div>
         <div class="collapse navbar-collapse" id="main-navbar">
+
+
             <ul class="navbar-nav mr-auto w-100 justify-content-end">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#header-wrap">
+                    <a class="nav-link" href="index.html">
             Home
           </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">
+                    <a class="nav-link" href="home/#about">
             About
           </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#schedules">
+                    <a class="nav-link" href="home/#schedules">
             PSL Calendar
           </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/psl-teams" routerLinkActive="router-link-active" href='#top'>
-            Teams
-          </a>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+                    Teams
+     </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" routerLink="/psl-teams" routerLinkActive="router-link-active" href='#top'>PSL Teams</a></li>
+                        <li><a class="dropdown-item" routerLink="/player-profile" routerLinkActive="router-link-active" href='#top'>Player Profile</a></li>
+
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#gallery">
-            Gallery
-          </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#faq">
-            Faq
-          </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#sponsors">
-                        Partners
-          </a>
-                </li>
+
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/blogs" routerLinkActive="router-link-active" href='#top'>
     Blog
   </a>
+
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">
-            Contact
-          </a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+  NEW'S/MEDIA
+       </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" routerLink="/news" routerLinkActive="router-link-active" href='#top'>NEW'S</a></li>
+                        <li><a class="dropdown-item" routerLink="/videos" routerLinkActive="router-link-active" href='#top'>VIDEO'S</a></li>
+                        <li><a class="dropdown-item" href="home/#gallery">PICTURE GALLERY</a></li>
+                        <li><a class="dropdown-item" routerLink="/previous-seasons" routerLinkActive="router-link-active" href='#top'>PREVIOUS SEASONS</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+  HOW TO APPLY
+       </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" routerLink="/qualifier" routerLinkActive="router-link-active" href='#top'>BE A QUALIFIER</a></li>
+                        <li><a class="dropdown-item" routerLink="/pro" routerLinkActive="router-link-active" href='#top'>BE A PRO</a></li>
+                        <li><a class="dropdown-item" routerLink="/mentor" routerLinkActive="router-link-active" href='#top'>BE A MENTOR</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+    More
+         </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="home/#sponsors">Our PARTNERS</a></li>
+                        <li><a class="dropdown-item" href="home/#faq">FAQ's</a></li>
+                        <li><a class="dropdown-item" href="home/#contact">Contact Us</a></li>
+                    </ul>
+                </li>
+
             </ul>
         </div>
     </div>
@@ -75,18 +106,20 @@
         <li>
             <a class="page-scroll" href="#team">Teams</a>
         </li>
-        <li>
-            <a class="page-scroll" href="#gallery">Gallery</a>
-        </li>
-        <li>
-            <a class="page-scroll" href="#faq">Faq</a>
-        </li>
-        <li>
-            <a class="page-scroll" href="#sponsors">Partners</a>
-        </li>
 
         <li>
             <a class="page-scroll" href="#contact">Contact</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+More
+</a>
+
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#sponsors">Our PARTNERS</a></li>
+                <li><a class="dropdown-item" href="#faq">FAQ's</a></li>
+                <li><a class="dropdown-item" href="#gallery">GALLERY</a></li>
+            </ul>
         </li>
     </ul>
     <!-- Mobile Menu End -->
