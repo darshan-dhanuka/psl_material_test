@@ -53,14 +53,15 @@
     <!-- reg/login popup div start-->
     <div style="display:none" id="divshow2">
             <app-login></app-login>
-	</div>
-	<div style="display:none" id="divreg">
-		<app-register></app-register>
-	</div>
-	<div style="display:none" id="divfp">
-		<app-forgot-password></app-forgot-password>
-	</div>
+    </div>
+    <div style="display:none" id="divreg">
+        <app-register></app-register>
+    </div>
+    <div style="display:none" id="divfp">
+        <app-forgot-password></app-forgot-password>
+    </div>
      <!--reg/login popup div end-->
+
     <!-- Main Carousel Section End -->
 
 </header>
@@ -71,6 +72,19 @@
         <app-popup-banner></app-popup-banner>
 </div>
 <!--Popup banner div end-->
+
+<!---floating icon-->
+<div id="mySidenav" class="sidenav">
+        <div class="">
+            <a href="javascript:void(0);" class="nav-reg-btn levitate" (click)="togglereg()" id="reg">Register Now </a>
+        </div>
+    </div>
+    <div style="display:none" id="divreg" class="toggle-form">
+        <app-register></app-register>
+    </div>
+
+<!---floating icon-->
+
 <!-- Coundown Section Start -->
 <section class="countdown-timer section-padding">
     <div class="container">
@@ -766,144 +780,7 @@
 <!-- Gallary Section End -->
 
 <!-- Ask Question Section Start -->
-<section id="faq" class="section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="section-title-header text-center">
-                    <h1 class="section-title wow fadeInUp" data-wow-delay="0.2s">Ask Question?</h1>
-                    <p class="wow fadeInDown" data-wow-delay="0.2s">Poker Sports League</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                <div class="accordion">
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <div class="header-title" data-toggle="collapse" data-target="#questionOne" aria-expanded="true" aria-controls="collapseOne">
-                                <i class="lni-pencil"></i> Why should I register for PSL?
-                            </div>
-                        </div>
-                        <div id="questionOne" class="collapse" aria-labelledby="headingOne" data-parent="#question">
-                            <div class="card-body">
-                                If you aspire to be a part of any teams or be up to speed with information on the league, then you need to register as a player first. Any Indian poker player who wishes to play the game as a sport and showcase his skill should register for PSL and give
-                                himself the chance to be a part of the teams. </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingTwo">
-                            <div class="header-title" data-toggle="collapse" data-target="#questionTwo" aria-expanded="false" aria-controls="questionTwo">
-                                <i class="lni-pencil"></i> What are the remunerations for a player?
-                            </div>
-                        </div>
-                        <div id="questionTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#question">
-                            <div class="card-body">
-                                A player who makes it to the teams will have the following minimum remunerations. There is a remuneration for every player who is selected as an active player in any PSL team. Each player will also have a winning incentive which will be a percentage of
-                                the total prize pool of the team. These remunerations will increase based on team performance in the Finale. </div>
-
-                            <table class="mentorTable">
-                                <tr>
-                                    <td>Mentor</td>
-                                    <td>5,00,000</td>
-                                    <td>10%</td>
-                                </tr>
-                                <tr>
-                                    <td>Pro</td>
-                                    <td>2,00,000</td>
-                                    <td>7%</td>
-                                </tr>
-                                <tr>
-                                    <td>Qualifier</td>
-                                    <td>1,00,000</td>
-                                    <td>3%</td>
-                                </tr>
-                            </table>
-
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingThree">
-                            <div class="header-title" data-toggle="collapse" data-target="#questionThree" aria-expanded="false" aria-controls="questionThree">
-                                <i class="lni-pencil"></i>Is my personal information safe with PSL?
-                            </div>
-                        </div>
-                        <div id="questionThree" class="collapse" aria-labelledby="headingThree" data-parent="#question">
-                            <div class="card-body">
-                                PSL doesn’t share the information entered by a player while registering with any third party. PSL does reserve the right to share this information with any sponsors/endorsers for the event. The sponsors can use this information for advertorial purposes
-                                only. Sponsors are not entitled to further share or sell this information. Players should also note that all the information they provide should be within the legal framework of the country and all laws have been complied
-                                with.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingThree">
-                            <div class="header-title" data-toggle="collapse" data-target="#questionFour" aria-expanded="false" aria-controls="questionFour">
-                                <i class="lni-pencil"></i> I want to register. Should I choose as a pro player or a qualifier registration?
-                            </div>
-                        </div>
-                        <div id="questionFour" class="collapse" aria-labelledby="headingThree" data-parent="#question">
-                            <div class="card-body">
-                                Any Indian poker player who feels that they have enough poker accomplishments should register for the Pro player draft. On the other hand, if you are just starting up as a player, then you should play live or online events to qualify.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                <div class="accordion">
-                    <div class="card">
-                        <div class="card-header" id="headingOne2">
-                            <div class="header-title" data-toggle="collapse" data-target="#questionOne2" aria-expanded="true" aria-controls="collapseOne">
-                                <i class="lni-pencil"></i> How much does it cost to be a part of PSL?
-                            </div>
-                        </div>
-                        <div id="questionOne2" class="collapse" aria-labelledby="headingOne" data-parent="#question">
-                            <div class="card-body">
-                                There is no fee to a part of PSL. Any poker player register as a PSL player free of cost.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingTwo2">
-                            <div class="header-title" data-toggle="collapse" data-target="#questionTwo2" aria-expanded="false" aria-controls="questionTwo">
-                                <i class="lni-pencil"></i>Can I keep my username secret?
-                            </div>
-                        </div>
-                        <div id="questionTwo2" class="collapse" aria-labelledby="headingTwo" data-parent="#question">
-                            <div class="card-body">
-                                Your username cannot be kept secret if you wish to enter the drafting pool. Since this needs to be an open forum players in the drafting pool, any anonymous player cannot be gauged on skills and cannot be drafted.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingThree">
-                            <div class="header-title" data-toggle="collapse" data-target="#questionFive" aria-expanded="false" aria-controls="questionFive">
-                                <i class="lni-pencil"></i> If after registration, I decide to not be a part of PSL can I delete my account?
-                            </div>
-                        </div>
-                        <div id="questionFive" class="collapse" aria-labelledby="headingThree" data-parent="#question">
-                            <div class="card-body">
-                                A PSL account cannot be deleted. But if you don’t wish to be a part of PSL and have a chance to be drafted then you need to inform PSL as soon as possible by email.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingThree">
-                            <div class="header-title" data-toggle="collapse" data-target="#questionSix" aria-expanded="false" aria-controls="questionSix">
-                                <i class="lni-pencil"></i> How is the prize pool divided?
-                            </div>
-                        </div>
-                        <div id="questionSix" class="collapse" aria-labelledby="headingThree" data-parent="#question">
-                            <div class="card-body">
-                                61% of the winnings go to the Team Owner and 39 % towards Player Incentive inSeason 2 </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<app-faqs></app-faqs>
 <!-- Ask Question Section End -->
 
 <!-- Sponsors Section Start -->
