@@ -52,7 +52,8 @@ import { PreviousSeasonsComponent } from './previous-seasons/previous-seasons.co
 
 import { BsDatepickerModule} from 'ngx-bootstrap/datepicker';
 import { ReactiveFormsModule } from '@angular/forms';																			  
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';																					  
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { PopupBannerComponent } from './popup-banner/popup-banner.component';																																							  
 const config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
@@ -110,7 +111,8 @@ export function provideConfig() {
     VideosComponent,
     GalleryComponent,
     PreviousSeasonsComponent,
-	ForgotPasswordComponent
+	ForgotPasswordComponent,
+	PopupBannerComponent
   ],
   imports: [
     BrowserModule,

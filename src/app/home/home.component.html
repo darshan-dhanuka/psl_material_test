@@ -49,20 +49,28 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+
+    <!-- reg/login popup div start-->
     <div style="display:none" id="divshow2">
             <app-login></app-login>
-        </div>
-        <div style="display:none" id="divreg">
-            <app-register></app-register>
-        </div>
-        <div style="display:none" id="divfp">
-            <app-forgot-password></app-forgot-password>
-        </div>
+	</div>
+	<div style="display:none" id="divreg">
+		<app-register></app-register>
+	</div>
+	<div style="display:none" id="divfp">
+		<app-forgot-password></app-forgot-password>
+	</div>
+     <!--reg/login popup div end-->
     <!-- Main Carousel Section End -->
 
 </header>
 <!-- Header Area wrapper End -->
 
+<!--Popup banner div start-->
+<div style="display:none" id="div_popupbanner">
+        <app-popup-banner></app-popup-banner>
+</div>
+<!--Popup banner div end-->
 <!-- Coundown Section Start -->
 <section class="countdown-timer section-padding">
     <div class="container">
