@@ -64,7 +64,7 @@
                     </a>
 
                     <ul class="dropdown-menu">
-
+                        <li><a class="dropdown-item" routerLink="/league-structure" routerLinkActive="router-link-active" href='#top'>LEAGUE STRUCTURE</a></li>
                         <li><a class="dropdown-item" routerLink="/how-to-play" routerLinkActive="router-link-active" href='#top'>HOW TO PLAY</a></li>
                         <li><a class="dropdown-item" routerLink="/qualifier" routerLinkActive="router-link-active" href='#top'>BE A QUALIFIER</a></li>
                         <li><a class="dropdown-item" routerLink="/pro" routerLinkActive="router-link-active" href='#top'>BE A PRO</a></li>
@@ -85,14 +85,14 @@
                     </ul>
                 </li>
 
-               
+
                 <li *ngIf="auth.isLoggedIn()" class="nav-item">
-                        <a href="javascript:void(0);" (click)="auth.logout()" class="nav-link">Logout &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i> </a>
+                    <a href="javascript:void(0);" (click)="auth.logout()" class="nav-link">Logout &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i> </a>
                 </li>
                 <li *ngIf="user" class="nav-item">
                     <a href="javascript:void(0);" (click)="signOut()" class="nav-link">Logout  &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i> </a>
                 </li>
-               
+
 
             </ul>
         </div>
