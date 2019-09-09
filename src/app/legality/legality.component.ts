@@ -5,11 +5,12 @@ import { AuthService } from 'angularx-social-login';
 import { SocialUser } from 'angularx-social-login';
 
 @Component({
-  selector: 'app-how-to-play',
-  templateUrl: './how-to-play.component.html',
-  styleUrls: ['./how-to-play.component.css']
+  selector: 'app-legality',
+  templateUrl: './legality.component.html',
+  styleUrls: ['./legality.component.css']
 })
-export class HowToPlayComponent implements OnInit {
+export class LegalityComponent implements OnInit {
+
   public show_dialog : boolean = false;
   public show_reg : boolean = false;
   public button_name : any = 'Show Login Form!';

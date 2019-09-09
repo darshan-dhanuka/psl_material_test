@@ -26,13 +26,14 @@ import { PslTeamComponent } from './psl-team/psl-team.component';
 import { QualifierComponent } from './qualifier/qualifier.component';
 import { ProComponent } from './pro/pro.component';
 import { MentorComponent } from './mentor/mentor.component';
-
+import { HowToPlayComponent } from './how-to-play/how-to-play.component';
 import { VideosComponent } from './videos/videos.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { Season1Component } from './season1/season1.component';
 import { Season2Component } from './season2/season2.component';
 import { PreviousSeasonsComponent } from './previous-seasons/previous-seasons.component';
 import { NewsComponent } from './news/news.component';
+import { LegalityComponent } from './legality/legality.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -52,7 +53,8 @@ const routes: Routes = [
   {path: 'punjab-bluffers', component: PunjabBluffersComponent},
   {path: 'rajasthan-tilters', component: RajasthanTiltersComponent},
   {path: 'about', component: AboutComponent},
-  
+  {path: 'legality', component: LegalityComponent},
+  {path: 'how-to-play', component: HowToPlayComponent},
   {path: 'team-members', component: TeamMembersComponent},
   {path: 'about-mission', component: AboutMissionComponent},
   {path: 'about-vision', component: AboutVisionComponent},
