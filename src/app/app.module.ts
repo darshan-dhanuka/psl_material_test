@@ -56,6 +56,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { PopupBannerComponent } from './popup-banner/popup-banner.component';
 import { HowToPlayComponent } from './how-to-play/how-to-play.component';
 import { LegalityComponent } from './legality/legality.component';
+import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
+
 const config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
@@ -116,7 +118,9 @@ export function provideConfig() {
 	ForgotPasswordComponent,
 	PopupBannerComponent,
 	HowToPlayComponent,
-	LegalityComponent
+	LegalityComponent,
+	TermsAndConditionsComponent,
+
   ],
   imports: [
     BrowserModule,

@@ -1,226 +1,127 @@
-<!-- league structure -->
-<!DOCTYPE html>
-<html lang="en">
+<header id="header-wrap">
+    <app-navigation></app-navigation>
+    <!-- Main Carousel Section Start -->
+    <div id="main-slide" class="carousel slide" data-ride="carousel">
 
-<head>
-    <title>
-        Poker Players Application 2018 -All About-PokerSportsleague.com </title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Know all about Poker Players Applications on PokerSportleague.com-PSL 2018 Season 2
-">
-    <meta name="keywords" content="Poker Player application, what is poker player application, PSL 2018, win money by play as PSL player
-">
-    <meta name="google-site-verification" content="vjCj63SGzZo9VFaYBFFn3TWRTrkxfjhe71MmxBB1HCc" />
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://d3rrji2dvvcisw.cloudfront.net/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://d3rrji2dvvcisw.cloudfront.net/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://d3rrji2dvvcisw.cloudfront.net/css/jquery-ui.css">
-    <link rel="stylesheet" href="https://d3rrji2dvvcisw.cloudfront.net/css/style.css">
-    <link rel="stylesheet" href="https://d3rrji2dvvcisw.cloudfront.net/css/inner.css">
-</head>
-<style>
-    #imgSlider {
-        background: url('https://d3rrji2dvvcisw.cloudfront.net/images/loginpageslider171.jpg') no-repeat center top / auto 100%;
-    }
+        <div class="carousel-inner">
+            <div class="team-banner">
+                <img class="d-block w-100" src="assets/img/background/team-banner.jpg" alt="First slide">
+                <div class="carousel-caption d-md-block">
+                    <p class="fadeInUp wow" data-wow-delay=".6s">India's First Poker League</p>
 
-    .loader {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.7);
-        z-index: 1000;
-    }
-
-    .loader img {
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        left: 50% !important;
-        top: 50%;
-        position: absolute;
-    }
-
-    .bannerMidSec .customBtn {
-        max-width: 170px;
-    }
-
-    @media only screen and (max-width: 640px) {
-        #imgSlider {
-            background: url('https://d3rrji2dvvcisw.cloudfront.net/images/loginpageslider1-mob112.jpg') no-repeat center top / 100% auto;
-        }
-        .bannerMidSec .customBtn {
-            max-width: 170px;
-        }
-    }
-</style>
-
-<body>
-    <header class="header">
-        <app-navigation></app-navigation>
-        <nav>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-6 col-sm-2 col-lg-3 logo">
-                        <a href="/index.html"><img src="https://d3rrji2dvvcisw.cloudfront.net/images/logo1.png" alt=""></a>
+                    <h1 class="wow fadeInDown heading" data-wow-delay=".4s">Poker Sports League</h1>
+                    <h1 class="wow fadeInDown heading" data-wow-delay=".4s">Player profile</h1>
+                    <a href="javascript:void(0);" class="fadeInLeft wow btn btn-border btn-lg" data-wow-delay=".6s" (click)="togglereg()" id="reg">Register Now! </a>
+                    <div *ngIf="!auth.isLoggedIn() && !user" class="nav-item">
+                        <button (click)="toggle()" id="btToggle" class="fadeInRight wow btn btn-border btn-lg" data-wow-delay=".6s">Login </button>
                     </div>
+
                 </div>
             </div>
-        </nav>
-    </header>
-    <section class="subPagebanner">
-        <div class="">
-            <div class="item">
-                <div id="imgSlider" class="imgSlider">
-                    <div class="container spclftAlgn">
-                        <div class="bannerMidSec">
-                            <h2>player application</h2>
+
+        </div>
+        <!-- Main Carousel Section End -->
+    </div>
+</header>
+
+<section>
+    <div class="container matter">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="contentContainer">
+                    <div class="custom-box">
+                        <h3 class="common-heading text-center">League Structure</h3>
+                        <div class="content-box">
+
+                            <p>The idea behind Poker Sports League, is to sportify the game. To Introduce a league for team- based poker, the first and only of its kind. To provide an Arena which is fair and accessible to all. To provide a stage where the
+                                best, Nationally and Internationally can bring out the big guns and duke it out for the Glory. We have big prize pools, no entry fee and a hell of competition ahead. The league’s only aim is to grow the game. To take it
+                                to heights previously unheard of. And you can rest assured we will leave no stone unturned while doing that. &ldquo;&rdquo;.</p>
+                            <p>The league is draft based where players are drafted for teams from a pool of online qualifiers, live qualifiers, Pros and wildcards after deliberation by the owner(s) with their mentor(s).&rdquo;</p>
+
                         </div>
+                        <div class="col-xs-12">
+                            <h4 class="globleHeadingh4 globlegreen">Structure-
+                            </h4>
+                            <p><strong>Qualifiers -> &ldquo;&rdquo;</strong>
+                            </p>
+                            <p> 1) Players qualify for drafting pools by doing well in online/live qualifiers.- &ldquo;&rdquo;
+                            </p>
+                            <p> Get an opportunity to play for glory by playing free online qualifiers that are running on a regular schedule. Come play with us live at the nicest banquet halls across the country and get a chance to play poker on India’s
+                                biggest stage. Be a part of history &ldquo;&rdquo;
+                            </p>
+                            <p>2) Players qualify from Pro drafts and wildcard entries &ldquo;&rdquo;
+                            </p>
+
+                        </div>
+                        <div class="col-xs-12">
+                            <p><strong>B) Selection Ceremony- Players from various drafts are selected and assigned teams.
+                            </strong></p>
+
+                            <p> 1) Players are drafted in teams, picked by mentors based on their performances. &ldquo;&rdquo;
+                            </p>
+                        </div>
+                        <div class="col-xs-12">
+                            <p><strong>C) Boot Camp (2 days)</strong></p>
+                            <p>1) Interact with your team and other teams while working on your strategies,tactics and game plan.This two day bootcamp is geared at preparing you for the five day grind ahead. So That you are in the right condition. Mentally,
+                                emotionally and physically to play your A-game.
+                            </p>
+                        </div>
+                        <div class="col-xs-12">
+                            <p><strong>D) Day 1</strong></p>
+
+                            <p>X event will be played on Day 1.
+                            </p>
+                        </div>
+                        <div class="col-xs-12">
+                            <p><strong>E) Day 2</strong></p>
+
+
+                            <p>Y event will be played on Day2
+                            </p>
+
+                        </div>
+                        <div class="col-xs-12">
+                            <p><strong>F) Day 3</strong></p>
+
+                            <p>Z event will be played on Day3 &ndash;
+                            </p>
+
+                        </div>
+                        <div class="col-xs-12">
+                            <p><strong>G) Day 4</strong></p>
+
+                            <p>Q event will be played on Day4
+                            </p>
+                        </div>
+                        <div class="col-xs-12">
+                            <p><strong>H) Finale</strong></p>
+
+                            <p>Watch the teams duke it out for the Gold, glory and trophy. The team that scores the highest PSLP wins.</p>
+                        </div>
+                        <div class="col-xs-12">
+                            <p><strong>G) Awarding Ceremony </strong></p>
+                            <p>I) End of Itenary</p>
+                        </div>
+                        <div class="col-xs-12">
+                            <p><strong>So what are you waiting for? Put your thinking cap and poker face on, and gun it for glory!</strong></p>
+
+
+
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</section>
 
-    </section>
 
-    <section class="player-appli">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="col-xs-12 col-sm-6 pos-relative"><img src="https://d3rrji2dvvcisw.cloudfront.net/images/player-application.jpg" alt="" />
-                        <!--<a class="btn customBtn" href="../../pro-player-registration">apply now</a>--><a class="btn customBtn">closed</a></div>
-                    <div class="col-xs-12 col-sm-6 mrt20b10">
-                        <h4 class="globleHeadingh4 globlegreen">Pro Player Application(Deadline 11th February)</h4>
-                        <p>For Season 1, each team had 2 Pro players who were be the &lsquo;Key Players&rsquo;. These were chosen through a detailed selection procedure which considered their recent poker achievements. For Season 2, team owners have the
-                            option to retain pros who have performed well in Season 1. The exact number of spots that are open in the pro draft will be announced at a later time.&nbsp;</p>
-                    </div>
-                </div>
-                <div class="col-xs-12">
-                    <div class="col-xs-12 col-sm-6 pull-right pos-relative"><img src="https://d3rrji2dvvcisw.cloudfront.net/images/qualify-through-live-satellites.jpg" alt="" />
-                        <!--<a class="btn customBtn" href="../../schedule/live-qualifier">See Schedule</a>--><a class="btn customBtn">closed</a></div>
-                    <div class="col-xs-12 col-sm-6 mrt20b10">
-                        <h4 class="globleHeadingh4 globlegreen">Qualify Through Live Satellites</h4>
-                        <p>For Season 1, each team had 2 Live qualifiers who were selected via live satellites which ran in a select few cities across India. For Season 2, the entire poker player community of India stands a chance to qualify. From the recreational
-                            players to the tournament regs, all come down on the same platform. Those who show maximum skills and can climb the leaderboard will make it to the draft. For Season 2, team owners have the option to retain qualifiers who have
-                            performed well in Season 1. The exact number of spots that are open in the Live Qualifier will be announced at a later time. For Season 2, Live Qualifiers are scheduled to begin in December 2017 <br />Please read the rules
-                            carefully.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-xs-12">
-                    <div class="col-xs-12 col-sm-6 pos-relative"><img src="https://d3rrji2dvvcisw.cloudfront.net/images/online-qualifiers.jpg" alt="" />
-                        <!--<a class="btn customBtn" href="../../schedule/online-qualifier">See Schedule</a>--><a class="btn customBtn">closed</a></div>
-                    <div class="col-xs-12 col-sm-6 mrt20b10">
-                        <h4 class="globleHeadingh4 globlegreen">Qualify Through Online Satellites</h4>
-                        <p>For Season 1, each team had 2 online qualifiers who were selected via a leaderboard which was formed based on performances of players across India who played free online qualifiers on . For Season 2 ,Each team will have 3 Online
-                            qualifiers The entire online poker player community of India stands a chance to qualify. These freeroll tournaments will run for almost 4 months with top performers making it to the leaderboard. For Season 2, team owners have
-                            the option to retain qualifiers who have performed well in Season 1. The exact number of spots that are open in the Live Qualifier will be announced at a later time.For Season 2, Live Qualifiers are scheduled to begin in December
-                            2017
-                            <br /> Please read the rules carefully.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <div class="footerNav">
 
-        </div>
-        <div class="allrights">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">©Poker Sports League. All Rights Reserved</div>
-                </div>
-            </div>
-        </div>
 
-    </footer>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89502683-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-89502683-1');
-    </script>
-
-    <script data-obct type="text/javascript">
-        /** DO NOT MODIFY THIS CODE**/ ! function(_window, _document) {
-            var OB_ADV_ID = '00fabbc9c397955804969747d2789f994b';
-            if (_window.obApi) {
-                var toArray = function(object) {
-                    return Object.prototype.toString.call(object) === '[object Array]' ? object : [object];
-                };
-                _window.obApi.marketerId = toArray(_window.obApi.marketerId).concat(toArray(OB_ADV_ID));
-                return;
-            }
-            var api = _window.obApi = function() {
-                api.dispatch ? api.dispatch.apply(api, arguments) : api.queue.push(arguments);
-            };
-            api.version = '1.1';
-            api.loaded = true;
-            api.marketerId = OB_ADV_ID;
-            api.queue = [];
-            var tag = _document.createElement('script');
-            tag.async = true;
-            tag.src = '//amplify.outbrain.com/cp/obtp.js';
-            tag.type = 'text/javascript';
-            var script = _document.getElementsByTagName('script')[0];
-            script.parentNode.insertBefore(tag, script);
-        }(window, document);
-        obApi('track', 'PAGE_VIEW');
-    </script>
-
-    <img src='//pixel.mathtag.com/event/img?mt_id=1334628&mt_adid=208364&mt_exem=&mt_excl=&v1=&v2=&v3=&s1=&s2=&s3=' width='1' height='1' />
-    <!-- Facebook Pixel Code -->
-    <script>
-        ! function(f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function() {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '555586341482250');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=555586341482250&ev=PageView&noscript=1"
-/></noscript>
-    <!-- End Facebook Pixel Code -->
-    <script src="https://d3rrji2dvvcisw.cloudfront.net/js/jquery.min.js"></script>
-    <script src="https://d3rrji2dvvcisw.cloudfront.net/js/owl.carousel.js"></script>
-    <script src="https://d3rrji2dvvcisw.cloudfront.net/js/main.js"></script>
-    <script src="https://d3rrji2dvvcisw.cloudfront.net/js/jquery-ui.min.js"></script>
-    <script type="text/javascript">
-        if ($(window).width() < 992) {
-            var gttdval1 = $('.table thead tr th').length;
-            for (var i = 1; i <= gttdval1; i++) {
-                $('.table tbody tr td:nth-child(' + i + ')').prepend('<span class="dptadded">' + $(".table thead tr th:nth-child(" + i + ")").text() + '</span>');
-                $('.sch-livQua .table tbody tr td:first-child span:first-child').text('City');
-            }
-        }
-    </script>
-</body>
-
-</html>
-
-<!-- //testimonials -->
+<div style="display:none" id="divreg" class="toggle-form">
+    <app-register></app-register>
+</div>
+<div style="display:none" id="divshow2">
+    <app-login></app-login>
+</div>

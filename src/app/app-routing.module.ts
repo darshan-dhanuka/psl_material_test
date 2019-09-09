@@ -16,7 +16,7 @@ import { PuneSharksComponent } from './pune-sharks/pune-sharks.component';
 import { PunjabBluffersComponent } from './punjab-bluffers/punjab-bluffers.component';
 import { RajasthanTiltersComponent } from './rajasthan-tilters/rajasthan-tilters.component';
 import { AboutComponent } from './about/about.component';
-
+import { TermsComponent } from './terms/terms.component';
 import { TeamMembersComponent } from './team-members/team-members.component';
 import { AboutMissionComponent } from './about-mission/about-mission.component';
 import { AboutVisionComponent } from './about-vision/about-vision.component';
@@ -34,6 +34,7 @@ import { Season2Component } from './season2/season2.component';
 import { PreviousSeasonsComponent } from './previous-seasons/previous-seasons.component';
 import { NewsComponent } from './news/news.component';
 import { LegalityComponent } from './legality/legality.component';
+import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -71,6 +72,7 @@ const routes: Routes = [
   {path: 'season1', component:  Season1Component},
   {path: 'season2', component:  Season2Component},
   {path: 'previous-seasons', component:  PreviousSeasonsComponent},
+  {path: 'terms', component:  TermsAndConditionsComponent},
   {path: 'player-profile', component:  PlayerProfileComponent}
 
 

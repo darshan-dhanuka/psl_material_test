@@ -3,13 +3,12 @@ import { PlatformLocation } from '@angular/common';
 import { AuthenticationService, UserDetails } from '../authentication.service';
 import { AuthService } from 'angularx-social-login';
 import { SocialUser } from 'angularx-social-login';
-
 @Component({
-  selector: 'app-league-structure',
-  templateUrl: './league-structure.component.html',
-  styleUrls: ['./league-structure.component.css']
+  selector: 'app-terms-and-conditions',
+  templateUrl: './terms-and-conditions.component.html',
+  styleUrls: ['./terms-and-conditions.component.css']
 })
-export class LeagueStructureComponent implements OnInit {
+export class TermsAndConditionsComponent implements OnInit {
 
   public show_dialog : boolean = false;
   public show_reg : boolean = false;
