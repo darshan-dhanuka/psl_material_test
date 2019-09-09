@@ -30,6 +30,7 @@ export interface TokenPayload {
   name: string
   email: string
   password: string
+  confirm_password: string
   state: number
   city: number
   phone: string
