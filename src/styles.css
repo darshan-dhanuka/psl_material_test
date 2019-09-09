@@ -1832,6 +1832,11 @@ a.back-to-top:focus {
     font-size: 15px;
     text-align: left;
     line-height: 24px;
+	border-radius: 30px;				 
+				   
+				 
+					   
+			   
 }
 
 .social-btn .btn i {
@@ -1853,12 +1858,16 @@ a.back-to-top:focus {
 .style-login {
     border-radius: 11px;
     /* background: url(/assets/images/banner6.png) no-repeat 0px 0px; */
-    padding: 15px;
+    padding: 46px;
     background-size: cover;
     background: #f1f1f1;
     padding: 30px;
-    overflow-y: auto;
-    height: 580px;
+    /*overflow-y: auto;*/
+    height: 606px;
+    margin-left: auto!important;
+    margin-top: 2rem!important;
+    margin-right: auto!important;
+    width: 60%;
 }
 
 .style-login h1 {
