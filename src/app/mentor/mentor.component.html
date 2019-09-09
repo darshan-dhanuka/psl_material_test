@@ -13,9 +13,10 @@
                     <h1 class="wow fadeInDown heading" data-wow-delay=".4s">Poker Sports League</h1>
                     <h1 class="wow fadeInDown heading" data-wow-delay=".4s">Be a Mentor</h1>
 
-                    <a href="#" class="fadeInLeft wow btn btn-common btn-lg" data-wow-delay=".6s">Register Now!</a>
-                    <a href="#" class="fadeInRight wow btn btn-border btn-lg" data-wow-delay=".6s">Login</a>
-
+                    <a href="javascript:void(0);" class="fadeInLeft wow btn btn-border btn-lg" data-wow-delay=".6s" (click)="togglereg()" id="reg">Register Now! </a>
+                    <div *ngIf="!auth.isLoggedIn() && !user" class="nav-item">
+                        <button (click)="toggle()" id="btToggle" class="fadeInRight wow btn btn-border btn-lg" data-wow-delay=".6s">Login </button>
+                    </div>
                 </div>
             </div>
 
@@ -41,7 +42,7 @@
                             <p style="text-align: justify; font-size: 16px;">3) Needs to have played actively (500+ tournaments online) for a year.</p>
                             <p style="text-align: justify; font-size: 16px;">4) Needs to have played at least 3000 tournaments in the last 5 years.</p>
                             <p style="text-align: justify; font-size: 16px;">5) Needs to have at least 10 ITM’s in International fields.</p>
-                            <p style="text-align: justify; font-size: 18px;"><strong>you meet the following criteria, please submit your application <a href="#">here</a></strong> </p>
+                            <p style="text-align: justify; font-size: 18px;"><strong>If, you meet the following criteria, please submit your application <a (click)="togglereg()" id="reg" style="color: blue; cursor: pointer;">here</a></strong> </p>
                         </div>
                         <!--
                       <div class="row">
@@ -59,6 +60,12 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div style="display:none" id="divreg" class="toggle-form">
+            <app-register></app-register>
+        </div>
+        <div style="display:none" id="divshow2">
+            <app-login></app-login>
         </div>
     </div>
 </section>

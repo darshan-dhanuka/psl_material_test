@@ -12,8 +12,10 @@
 
                     <h1 class="wow fadeInDown heading" data-wow-delay=".4s">Poker Sports League</h1>
                     <h1 class="wow fadeInDown heading" data-wow-delay=".4s">Be a Qualifier</h1>
-                    <a href="#" class="fadeInLeft wow btn btn-common btn-lg" data-wow-delay=".6s">Register Now!</a>
-                    <a href="#" class="fadeInRight wow btn btn-border btn-lg" data-wow-delay=".6s">Login</a>
+                    <a href="javascript:void(0);" class="fadeInLeft wow btn btn-border btn-lg" data-wow-delay=".6s" (click)="togglereg()" id="reg">Register Now! </a>
+                    <div *ngIf="!auth.isLoggedIn() && !user" class="nav-item">
+                        <button (click)="toggle()" id="btToggle" class="fadeInRight wow btn btn-border btn-lg" data-wow-delay=".6s">Login </button>
+                    </div>
 
                 </div>
             </div>
@@ -22,3 +24,50 @@
         <!-- Main Carousel Section End -->
     </div>
 </header>
+
+<section>
+    <div class="container matter">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="contentContainer">
+                    <div class="custom-box">
+                        <h3 class="common-heading text-center">QUALIFIERS</h3>
+                        <div class="content-box">
+                            <p style="font-size: 18px;"><em><strong>&lsquo;Online Qualifiers&rsquo;</strong></em></p>
+                            <p style="text-align: justify; font-size: 18px;">Our online qualifiers are for poker enthusiasts who are unable to or can’t travel to our live qualifiers. There will be a total of 24 online qualifiers out of which a player is permitted to play a maximum of 6. X% of players
+                                will be awarded leaderboard points based on this formula *link*.</p>
+                            <p style="text-align: justify; font-size: 18px;">Top players on the leaderboard will be awarded a spot in the Online qualifiers draft. This is the road for you if you are a poker amateur eager to prove your chops.</p>
+                            <p style="font-size: 18px;"><em><strong>&lsquo;Live Qualifiers&rsquo;</strong></em></p>
+                            <p style="text-align: justify; font-size: 18px;">Our Live qualifiers are for the newer players to land a spot in a team. They are held at premiere locations, providing a great battling experience where amateurs can duke it out for a spot in something bigger. Something in
+                                a “league” of it’s own.
+                            </p>
+                            <p style="text-align: justify; font-size: 18px;">There will be a total of x live qualifiers out of which a player is permitted to play a maximum of 6. X% of players will be awarded leaderboard points based on this formula *link*.
+                            </p>
+                            <p style="text-align: justify; font-size: 18px;">Top players on the leaderboard will be awarded a spot in the Online qualifiers draft. This is the road for you if you are a poker amateur eager to prove your chops while staring your opponent down!</p>
+                            <p style="text-align: justify; font-size: 18px;"><strong>If, you meet the following criteria, please submit your application <a (click)="togglereg()" id="reg" style="color: blue; cursor: pointer;">here</a></strong> </p>
+                        </div>
+                        <!--
+                    <div class="row">
+                        <div class="col-xs-12 playVideomn">
+                            <p>&nbsp;</p>
+                            <h3 class="common-heading">Learn &amp; Play Poker With Adda52</h3>
+                            <div class="video-wrapper">
+                                <div class="play-area"><iframe id="player" title="YouTube video player" src="https://www.youtube.com/embed/SlcpPokznhw" frameborder="0" width="100%" height="100%"></iframe></div>
+                            </div>
+                            <div class="text-center takeTutorialBtn"><a class="btn red-btn global-btn" href="/home/openGamehtml5Window/poker">PLAY</a></div>
+                        </div>
+                    </div>
+                    -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display:none" id="divreg" class="toggle-form">
+            <app-register></app-register>
+        </div>
+        <div style="display:none" id="divshow2">
+            <app-login></app-login>
+        </div>
+    </div>
+</section>

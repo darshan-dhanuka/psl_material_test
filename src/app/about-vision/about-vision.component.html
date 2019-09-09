@@ -12,9 +12,10 @@
 
                     <h1 class="wow fadeInDown heading" data-wow-delay=".4s">Poker Sports League</h1>
                     <h1 class="wow fadeInDown heading" data-wow-delay=".4s">Our Vission</h1>
-                    <a href="#" class="fadeInLeft wow btn btn-common btn-lg" data-wow-delay=".6s">Register Now!</a>
-                    <a href="#" class="fadeInRight wow btn btn-border btn-lg" data-wow-delay=".6s">Login</a>
-
+                    <a href="javascript:void(0);" class="fadeInLeft wow btn btn-border btn-lg" data-wow-delay=".6s" (click)="togglereg()" id="reg">Register Now! </a>
+                    <div *ngIf="!auth.isLoggedIn() && !user" class="nav-item">
+                        <button (click)="toggle()" id="btToggle" class="fadeInRight wow btn btn-border btn-lg" data-wow-delay=".6s">Login </button>
+                    </div>
                 </div>
             </div>
 
@@ -24,16 +25,41 @@
 </header>
 
 <!-- Team Section Start -->
-<section id="team" class="section-padding text-center">
-    <div class="container">
+<section>
+    <div class="container matter">
         <div class="row">
-            <div class="heading text-center about-head">
-                <h3 class="heading mb-sm-5 mb-3 text-uppercase">PSL Vision </h3>
-            </div>
-            <p class="my-lg-4 my-3">Poker league India, PSL 2019, Buy poker teams in India, upcoming Poker league in India, Poker Sport league 2019, poker leaderboard, best poker team India, PSL updates.
-            </p>
+            <div class="col-xs-12">
+                <div class="contentContainer">
+                    <div class="custom-box">
+                        <h3 class="common-heading text-center">Our Vission </h3>
+                        <div class="content-box">
+                            <p style="font-size: 18px;"><em><strong>&lsquo;Poker league India, PSL 2019, Buy poker teams in India, upcoming Poker league in India, Poker Sport league 2019, poker leaderboard, best poker team India, PSL updates.&rsquo;</strong></em></p>
 
+                        </div>
+                        <!--
+                    <div class="row">
+                        <div class="col-xs-12 playVideomn">
+                            <p>&nbsp;</p>
+                            <h3 class="common-heading">Learn &amp; Play Poker With Adda52</h3>
+                            <div class="video-wrapper">
+                                <div class="play-area"><iframe id="player" title="YouTube video player" src="https://www.youtube.com/embed/SlcpPokznhw" frameborder="0" width="100%" height="100%"></iframe></div>
+                            </div>
+                            <div class="text-center takeTutorialBtn"><a class="btn red-btn global-btn" href="/home/openGamehtml5Window/poker">PLAY</a></div>
+                        </div>
+                    </div>
+                    -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display:none" id="divreg" class="toggle-form">
+            <app-register></app-register>
+        </div>
+        <div style="display:none" id="divshow2">
+            <app-login></app-login>
         </div>
     </div>
 </section>
+
 <!-- Team Section End -->

@@ -54,6 +54,7 @@ import { BsDatepickerModule} from 'ngx-bootstrap/datepicker';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { PopupBannerComponent } from './popup-banner/popup-banner.component';
+import { HowToPlayComponent } from './how-to-play/how-to-play.component';
 const config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
@@ -112,7 +113,8 @@ export function provideConfig() {
     GalleryComponent,
     PreviousSeasonsComponent,
 	ForgotPasswordComponent,
-	PopupBannerComponent
+	PopupBannerComponent,
+	HowToPlayComponent
   ],
   imports: [
     BrowserModule,
