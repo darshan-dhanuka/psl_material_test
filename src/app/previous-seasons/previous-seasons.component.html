@@ -13,8 +13,10 @@
 
                     <h1 class="wow fadeInDown heading" data-wow-delay=".4s">Poker Sports League</h1>
                     <h1 class="wow fadeInDown heading" data-wow-delay=".4s">Previous Seasons</h1>
-                    <a href="#" class="fadeInLeft wow btn btn-common btn-lg" data-wow-delay=".6s">Register Now!</a>
-                    <a href="#" class="fadeInRight wow btn btn-border btn-lg" data-wow-delay=".6s">Login</a>
+                    <a href="javascript:void(0);" class="fadeInLeft wow btn btn-border btn-lg" data-wow-delay=".6s" (click)="togglereg()" id="reg">Register Now! </a>
+                    <div *ngIf="!auth.isLoggedIn() && !user" class="nav-item">
+                        <button (click)="toggle()" id="btToggle" class="fadeInRight wow btn btn-border btn-lg" data-wow-delay=".6s">Login </button>
+                    </div>
 
                 </div>
             </div>
@@ -78,6 +80,13 @@
 
 
         </div>
+
+    </div>
+    <div style="display:none" id="divreg" class="toggle-form">
+        <app-register></app-register>
+    </div>
+    <div style="display:none" id="divshow2">
+        <app-login></app-login>
     </div>
 </section>
 <!-- Blog Section End -->
