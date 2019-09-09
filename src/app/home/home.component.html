@@ -1,1 +1,550 @@
-<div style="height:100%;width=100%;text-align:center"><img src="assets/img/coming.png"></div>
+<!-- Header Area wrapper Starts -->
+<header id="header-wrap">
+    <app-navigation></app-navigation>
+    <!-- Main Carousel Section Start -->
+    <div id="main-slide" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#main-slide" data-slide-to="0" class="active"></li>
+            <li data-target="#main-slide" data-slide-to="1"></li>
+            <li data-target="#main-slide" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="assets/img/slider/slide1.jpg" alt="First slide">
+                <div class="carousel-caption d-md-block">
+                    <p class="fadeInUp wow" data-wow-delay=".6s">India's First Poker League</p>
+                    <h1 class="wow fadeInDown heading" data-wow-delay=".4s">Poker Sports League</h1>
+
+                    <a href="javascript:void(0);" class="fadeInLeft wow btn btn-border btn-lg" data-wow-delay=".6s" (click)="togglereg()" id="reg">Register Now! </a>
+
+                    <div *ngIf="!auth.isLoggedIn() && !user" class="nav-item">
+                        <button (click)="toggle()" id="btToggle" class="fadeInRight wow btn btn-border btn-lg" data-wow-delay=".6s">Login </button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="assets/img/slider/slide2.jpg" alt="Second slide">
+                <div class="carousel-caption d-md-block">
+                    <p class="fadeInUp wow" data-wow-delay=".6s">Poker Sports League</p>
+                    <h1 class="wow bounceIn heading" data-wow-delay=".7s">#Poker Coming Soon</h1>
+                    <a href="javascript:void(0);" class="fadeInUp wow btn btn-border btn-lg" data-wow-delay=".8s" (click)="togglereg()" id="reg">Register Now! </a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="assets/img/slider/slide3.jpg" alt="Third slide">
+                <div class="carousel-caption d-md-block">
+                    <p class="fadeInUp wow" data-wow-delay=".6s">Poker Sports League</p>
+                    <h1 class="wow fadeInUp heading" data-wow-delay=".6s">Register Now for Season 3</h1>
+
+                    <a href="javascript:void(0);" class="fadeInUp wow btn btn-common btn-lg" data-wow-delay=".8s" (click)="togglereg()" id="reg">Register Now! </a>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#main-slide" role="button" data-slide="prev">
+            <span class="carousel-control" aria-hidden="true"><i class="lni-chevron-left"></i></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#main-slide" role="button" data-slide="next">
+            <span class="carousel-control" aria-hidden="true"><i class="lni-chevron-right"></i></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- reg/login popup div start-->
+    <div style="display:none" id="divshow2">
+        <app-login></app-login>
+    </div>
+    <div style="display:none" id="divreg">
+        <app-register></app-register>
+    </div>
+    <div style="display:none" id="divfp">
+        <app-forgot-password></app-forgot-password>
+    </div>
+    <!--reg/login popup div end-->
+
+    <!-- Main Carousel Section End -->
+
+</header>
+<!-- Header Area wrapper End -->
+
+<!--Popup banner div start-->
+<div style="display:none" id="div_popupbanner">
+    <app-popup-banner></app-popup-banner>
+</div>
+<!--Popup banner div end-->
+
+<!---floating icon-->
+<div id="mySidenav" class="sidenav">
+    <div class="">
+        <a href="javascript:void(0);" class="nav-reg-btn levitate" (click)="togglereg()" id="reg">Register Now </a>
+    </div>
+</div>
+<div style="display:none" id="divreg" class="toggle-form">
+    <app-register></app-register>
+</div>
+
+<!---floating icon-->
+
+<!-- Coundown Section Start -->
+<section class="countdown-timer section-padding">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="heading-count">
+                    <h2 class="wow fadeInDown" data-wow-delay="0.2s">Event Will Start In</h2>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="row time-countdown justify-content-center wow fadeInUp" data-wow-delay="0.2s">
+                    <div id="clock" class="time-count"></div>
+                </div>
+                <!--a href="pricing.html" class="btn btn-common wow fadeInUp" data-wow-delay="0.3s">Add to My Calender</a-->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Coundown Section End -->
+
+
+
+<!-- About Section Start -->
+<section id="about" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title-header text-center">
+                    <h1 class="section-title wow fadeInUp" data-wow-delay="0.2s">About Us</h1>
+                    <p class="wow fadeInDown" data-wow-delay="0.2s">Poker Sports League</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-lg-4">
+                <div class="about-item">
+                    <img class="img-fluid" src="https://www.dabur.com/img/article/11-mr.-amit-burman.jpg" style="width:100%;height:250px" alt="">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <b>Amit Burman, Co-founder and Invester</b><br>Amit Burman is the chairman of Dabur group. He is one of the prime invester of PSL.
+                            <div id="amit_burman" class="collapse" aria-labelledby="headingOne" data-parent="#headingOne">
+                                Mr. Amit Burman is responsible for Dabur India's foray into processed foods business with the setting up of Dabur Foods Ltd. It is to Amit's credit today that Dabur Real and Hommade are household names. He is also responsible for driving all business
+                                strategy, development and communications at Dabur Foods.
+                            </div>
+                            <div class="header-title" data-toggle="collapse" data-target="#amit_burman" aria-expanded="true" aria-controls="collapseOne" style="cursor:pointer">
+                                <span style="color:blue;">Read more</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--
+                  <div class="about-text">
+                      <h3><a href="#">Our Mission</a></h3>
+                      <p>Lorem ipsum dolor sit amet, consectetuer commodo ligula eget dolor.</p>
+                      <a class="btn btn-common btn-rm" routerLink="/about-mission" routerLinkActive="router-link-active" href='#top'>Read More</a>
+                  </div>
+-->
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-4">
+                <div class="about-item">
+                    <img class="img-fluid" src="assets/img/team/team-01.jpg" style="width: 100%;height:250px" alt="">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <b>Pranav Bagai, CEO and Co-Founder</b><br>Pranav Bagai CEO of PSL. He is one of the prime invester of PSL. Lorem ipsum dolor sit amet .
+                            <div id="pranav_bagai" class="collapse" aria-labelledby="headingOne" data-parent="#headingOne">
+                                Mr. Bagai is responsible for all operations and management of PSL .
+                            </div>
+                            <div class="header-title" data-toggle="collapse" data-target="#pranav_bagai" aria-expanded="true" aria-controls="collapseOne" style="cursor:pointer">
+                                <span style="color:blue;">Read more</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--
+                  <div class="about-text">
+                      <h3><a href="#">Our Vision</a></h3>
+                      <p>Lorem ipsum dolor sit amet, consectetuer commodo ligula eget dolor.</p>
+                      <a class="btn btn-common btn-rm" routerLink="/about-vision" routerLinkActive="router-link-active" href='#top'>Read More</a>
+                  </div>
+-->
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-4">
+                <div class="about-item">
+                    <img class="img-fluid" src="assets/img/team/goindi.jpg" style="width: 100%;height:250px" alt="">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <b>Abhishek Goindi, COO and Pro Player </b><br>Abhishek Goindi is C00 of PSL. He is one of the prime invester of PSL. Lorem ipsum dolor sit amet .
+                            <div id="a_g" class="collapse" aria-labelledby="headingOne" data-parent="#headingOne">
+                                Mr. Bagai is responsible for all operations and management of PSL .
+                            </div>
+                            <div class="header-title" data-toggle="collapse" data-target="#a_g" aria-expanded="true" aria-controls="collapseOne" style="cursor:pointer">
+                                <span style="color:blue;">Read more</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--
+                  <div class="about-text">
+                      <h3><a href="#">Our Team</a></h3>
+                      <p>Lorem ipsum dolor sit amet, consectetuer commodo ligula eget dolor.</p>
+                      <a class="btn btn-common btn-rm" routerLink="/team-members" routerLinkActive="router-link-active" href='#top'>Read More</a>
+                  </div>
+-->
+                </div>
+            </div>
+            <div style="height:100%;width:100%;text-align:center;padding:10px">
+                <a class="btn btn-common btn-rm" routerLink="/about-mission" routerLinkActive="router-link-active" href='#top'>Our Mission</a>&nbsp;&nbsp;
+                <a class="btn btn-common btn-rm" routerLink="/about-vision" routerLinkActive="router-link-active" href='#top'>Our Vision</a>&nbsp;&nbsp;
+                <a class="btn btn-common btn-rm" routerLink="/team-members" routerLinkActive="router-link-active" href='#top'>Our Team</a>&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About Section End -->
+
+<!-- Counter Area Start-->
+<section class="counter-section section-padding">
+    <div class="container">
+        <div class="row">
+            <!-- Counter Item -->
+            <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
+                <div class="counter wow fadeInRight" data-wow-delay="0.3s">
+                    <div class="icon"> <img src="assets/img/users.png" class="img-fluid team-img" alt="" href='#top' /></div>
+                    <p>11
+                    </p>
+                    <span>PARTICIPATING
+                      TEAMS</span>
+                </div>
+            </div>
+            <!-- Counter Item -->
+            <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
+                <div class="counter wow fadeInRight" data-wow-delay="0.6s">
+                    <div class="icon"> <img src="assets/img/single-user.png" class="img-fluid team-img" alt="" href='#top' /></div>
+                    <p>110
+                    </p>
+                    <span>PARTICIPATING
+                      PLAYERS</span>
+                </div>
+            </div>
+            <!-- Counter Item -->
+            <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
+                <div class="counter wow fadeInRight" data-wow-delay="0.9s">
+                    <div class="icon"> <img src="assets/img/usersquali.png" class="img-fluid team-img" alt="" href='#top' /></div>
+                    <p>150+
+                    </p>
+                    <span> FREE
+                      QUALIFIERS</span>
+                </div>
+            </div>
+            <!-- Counter Item -->
+            <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
+                <div class="counter wow fadeInRight" data-wow-delay="1.2s">
+                    <div class="icon"> <img src="assets/img/money.png" class="img-fluid team-img" alt="" href='#top' /></div>
+                    <p>4.5
+                    </p>
+                    <span> CRORES
+                      PRIZE POOL</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Counter Area End-->
+
+<!-- Schedule Section Start -->
+<app-event-schedule></app-event-schedule>
+<!-- Schedule Section End -->
+
+<!-- Team Section Start -->
+<section id="team" class="section-padding text-center">
+    <div class="container py-lg-3 py-2">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title-header text-center">
+                    <h1 class="section-title wow fadeInUp" data-wow-delay="0.2s">SEASON2 TEAMS</h1>
+
+                </div>
+            </div>
+        </div>
+        <div class="row barber-grids">
+            <div class="col-lg-3 col-sm-6 mb-lg-0 mb-5 text-center team-div">
+                <div class="team-grid1" routerLink="/andhra-bullets" routerLinkActive="router-link-active" href='#top'>
+                    <img src="assets/img/Andhra.jpg" class="img-fluid team-img" alt="" href='#top' />
+                </div>
+
+
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-lg-0 mb-5 text-center team-div" alt="">
+                <div class="team-grid1" routerLink="/bengaluru-warriors" routerLinkActive="router-link-active">
+                    <img src="assets/img/Bengaluru.jpg" class="img-fluid team-img" alt="" />
+                </div>
+
+
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-md-0 mb-5 text-center team-div" routerLink="/chennai-thalaivas" routerLinkActive="router-link-active">
+                <div class="team-grid1">
+                    <img src="assets/img/Chennai.jpg" class="img-fluid team-img" alt="" />
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-sm-6 text-center team-div">
+                <div class="team-grid1" routerLink="/delhi-penthars" routerLinkActive="router-link-active">
+                    <img src="assets/img/Delhi.jpg" class="img-fluid team-img" alt="" />
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-sm-6 text-center team-div" routerLink="/gujrat-falcons" routerLinkActive="router-link-active">
+                <div class="team-grid1">
+                    <img src="assets/img/Gujarat.jpg" class="img-fluid team-img" alt="" />
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-sm-6 text-center team-div" routerLink="/goan-nuts" routerLinkActive="router-link-active">
+                <div class="team-grid1">
+                    <img src="assets/img/Goa.jpg" class="img-fluid team-img" alt="" />
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-sm-6 text-center team-div" routerLink="/kolkata-kings" routerLinkActive="router-link-active">
+                <div class="team-grid1">
+                    <img src="assets/img/Kolkata.jpg" class="img-fluid team-img" alt="" />
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-sm-6 text-center team-div" routerLink="/mumbai-anchors" routerLinkActive="router-link-active">
+                <div class="team-grid1">
+                    <img src="assets/img/Mumbai.jpg" class="img-fluid team-img" alt="" />
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-sm-6 text-center team-div" routerLink="/pune-sharks" routerLinkActive="router-link-active">
+                <div class="team-grid1">
+                    <img src="assets/img/Pune.jpg" class="img-fluid team-img" alt="" />
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-sm-6 text-center team-div" routerLink="/punjab-bluffers" routerLinkActive="router-link-active">
+                <div class="team-grid1">
+                    <img src="assets/img/Punjab.jpg" class="img-fluid team-img" alt="" />
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-sm-6 text-center team-div" routerLink="/rajasthan-tilters" routerLinkActive="router-link-active">
+                <div class="team-grid1">
+                    <img src="assets/img/Rajasthan.jpg" class="img-fluid team-img" alt="" />
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Team Section End -->
+
+<!-- Gallary Section Start -->
+<section id="gallery" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title-header text-center">
+                    <h1 class="section-title wow fadeInUp" data-wow-delay="0.2s">Event gallery</h1>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-lg-4">
+                <div class="gallery-box">
+                    <div class="img-thumb">
+                        <img class="img-fluid" src="assets/img/gallery/image2.jpg" alt="">
+                    </div>
+                    <div class="overlay-box text-center">
+                        <a class="lightbox" href="assets/img/gallery/image2.jpg">
+                            <i class="lni-plus"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="ccol-md-6 col-sm-6 col-lg-4">
+                <div class="gallery-box">
+                    <div class="img-thumb">
+                        <img class="img-fluid" src="assets/img/gallery/image3.jpg" alt="">
+                    </div>
+                    <div class="overlay-box text-center">
+                        <a class="lightbox" href="assets/img/gallery/image3.jpg">
+                            <i class="lni-plus"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="ccol-md-6 col-sm-6 col-lg-4">
+                <div class="gallery-box">
+                    <div class="img-thumb">
+                        <img class="img-fluid" src="assets/img/gallery/image4.jpg" alt="">
+                    </div>
+                    <div class="overlay-box text-center">
+                        <a class="lightbox" href="assets/img/gallery/image4.jpg">
+                            <i class="lni-plus"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="ccol-md-6 col-sm-6 col-lg-4">
+                <div class="gallery-box">
+                    <div class="img-thumb">
+                        <img class="img-fluid" src="assets/img/gallery/image5.jpg" alt="">
+                    </div>
+                    <div class="overlay-box text-center">
+                        <a class="lightbox" href="assets/img/gallery/image5.jpg">
+                            <i class="lni-plus"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="ccol-md-6 col-sm-6 col-lg-4">
+                <div class="gallery-box">
+                    <div class="img-thumb">
+                        <img class="img-fluid" src="assets/img/gallery/image6.jpg" alt="">
+                    </div>
+                    <div class="overlay-box text-center">
+                        <a class="lightbox" href="assets/img/gallery/image6.jpg">
+                            <i class="lni-plus"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="ccol-md-6 col-sm-6 col-lg-4">
+                <div class="gallery-box">
+                    <div class="img-thumb">
+                        <img class="img-fluid" src="assets/img/gallery/image7.jpg" alt="">
+                    </div>
+                    <div class="overlay-box text-center">
+                        <a class="lightbox" href="assets/img/gallery/image7.jpg">
+                            <i class="lni-plus"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-3">
+            <div class="col-xs-12">
+                <a routerLink="/gallery" routerLinkActive="router-link-active" href='#top' class="btn btn-common">Browse All</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Gallary Section End -->
+
+<!-- Ask Question Section Start -->
+<app-faqs></app-faqs>
+<!-- Ask Question Section End -->
+
+<!-- Sponsors Section Start -->
+<section id="sponsors" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title-header text-center">
+                    <h1 class="section-title wow fadeInUp" data-wow-delay="0.2s">Partners</h1>
+
+                </div>
+            </div>
+        </div>
+        <div class="row mb-30 text-center wow fadeInDown" data-wow-delay="0.3s">
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="spnsors-logo" style="height: 90%; padding: 60px 5px;">
+                    <a href="https://www.adda52.com"><img class="img-fluid" src="assets/img/sponsors/adda.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="spnsors-logo">
+                    <a href="#"><img class="img-fluid" src="assets/img/sponsors/Poker_Stuff.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="spnsors-logo">
+                    <a href="#"><img class="img-fluid" src="assets/img/sponsors/Deltin.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="spnsors-logo">
+                    <a href="#"><img class="img-fluid" src="assets/img/sponsors/DSport.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="spnsors-logo">
+                    <a href="#"><img class="img-fluid" src="assets/img/sponsors/JJ.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="spnsors-logo">
+                    <a href="#"><img class="img-fluid" src="assets/img/sponsors/Mera_Hoardings.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="spnsors-logo">
+                    <a href="#"><img class="img-fluid" src="assets/img/sponsors/Real_Activ.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="spnsors-logo">
+                    <a href="#"><img class="img-fluid" src="assets/img/sponsors/OYO.png" alt=""></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Sponsors Section End -->
+
+
+
+<!-- Event Slides Section Start -->
+<section id="testimonials" class="section-padding" style="background: #16253c">
+    <app-testimonials></app-testimonials>
+
+</section>
+<!-- Event Slides Section End -->
+<!-- Testimonials -->
+
+<!-- Testimonials ends -->
+
+<!-- contact map and address -->
+
+
+
+
+<!-- Footer Section Start -->
+<app-footer></app-footer>
+<!-- Footer Section End -->
+
+<div id="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="site-info">
+                    <p>© Poker Sports League</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Go to Top Link -->
+<a href="#" class="back-to-top">
+    <i class="lni-chevron-up"></i>
+</a>
+
+<div id="preloader">
+    <div class="sk-circle">
+        <div class="sk-circle1 sk-child"></div>
+        <div class="sk-circle2 sk-child"></div>
+        <div class="sk-circle3 sk-child"></div>
+        <div class="sk-circle4 sk-child"></div>
+        <div class="sk-circle5 sk-child"></div>
+        <div class="sk-circle6 sk-child"></div>
+        <div class="sk-circle7 sk-child"></div>
+        <div class="sk-circle8 sk-child"></div>
+        <div class="sk-circle9 sk-child"></div>
+        <div class="sk-circle10 sk-child"></div>
+        <div class="sk-circle11 sk-child"></div>
+        <div class="sk-circle12 sk-child"></div>
+    </div>
+</div>

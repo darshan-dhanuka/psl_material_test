@@ -5,18 +5,18 @@ import { FormsModule } from '@angular/forms';
 import { AuthenticationService } from './authentication.service';
 import { AuthGuardService } from './auth-guard.service';
 
-
+import {FooterComponent} from './footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { AboutComponent } from './about/about.component';
 import { TermsComponent } from './terms/terms.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';													  
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { SocialLoginModule } from 'angularx-social-login';
-import { AuthServiceConfig, GoogleLoginProvider  } from 'angularx-social-login';			
+import { AuthServiceConfig, GoogleLoginProvider  } from 'angularx-social-login';
 import { AndhraBulletsComponent } from './andhra-bullets/andhra-bullets.component';
 import { BengaluruWarriorsComponent } from './bengaluru-warriors/bengaluru-warriors.component';
 import { ChennaiThalaivasComponent } from './chennai-thalaivas/chennai-thalaivas.component';
@@ -27,7 +27,7 @@ import { GujratFalconsComponent } from './gujrat-falcons/gujrat-falcons.componen
 import { HomeComponent } from './home/home.component';
 import { KolkataKingsComponent } from './kolkata-kings/kolkata-kings.component';
 import { LeagueStructureComponent } from './league-structure/league-structure.component';
-
+import {EventScheduleComponent} from './event-schedule/event-schedule.component';
 import { MumbaiAnchorsComponent } from './mumbai-anchors/mumbai-anchors.component';
 import { PuneSharksComponent } from './pune-sharks/pune-sharks.component';
 import { PunjabBluffersComponent } from './punjab-bluffers/punjab-bluffers.component';
@@ -51,9 +51,9 @@ import { PreviousSeasonsComponent } from './previous-seasons/previous-seasons.co
 
 
 import { BsDatepickerModule} from 'ngx-bootstrap/datepicker';
-import { ReactiveFormsModule } from '@angular/forms';																			  
+import { ReactiveFormsModule } from '@angular/forms';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { PopupBannerComponent } from './popup-banner/popup-banner.component';																																							  
+import { PopupBannerComponent } from './popup-banner/popup-banner.component';
 const config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
@@ -90,7 +90,7 @@ export function provideConfig() {
     HomeComponent,
     KolkataKingsComponent,
     LeagueStructureComponent,
-    
+    EventScheduleComponent,
     MumbaiAnchorsComponent,
     PuneSharksComponent,
     PunjabBluffersComponent,
@@ -98,7 +98,7 @@ export function provideConfig() {
     AboutMissionComponent,
     AboutVisionComponent,
     TeamMembersComponent,
-  
+    FooterComponent,
     BlogsComponent,
     PlayerProfileComponent,
     Season1Component,
@@ -122,7 +122,7 @@ export function provideConfig() {
 	SocialLoginModule,
     BsDatepickerModule.forRoot(),
     BrowserAnimationsModule,
-    ReactiveFormsModule			   
+    ReactiveFormsModule
   ],
   providers: [AuthenticationService, AuthGuardService,
     {

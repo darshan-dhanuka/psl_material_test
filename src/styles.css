@@ -1621,8 +1621,8 @@ a.back-to-top:focus {
 /* Conact Home Page Section */
 
 .contact-map iframe {
-    width: 100%;
-    height: 450px;
+    width: 20%;
+    height: 100px;
     border: none;
     outline: none;
     border: 2px dotted #666;
@@ -1654,17 +1654,17 @@ a.back-to-top:focus {
 
 .contact-main-grid {
     position: relative;
+    bottom: 330px;
+    left: 75%;
 }
 
 .contact-info {
     position: absolute;
     background: #222;
-    padding: 4em 3em;
+    padding: 1em 0em;
     border: 1px dashed #222;
-    right: 0.2%;
-    bottom: 2.1%;
-    top: 0.6%;
-    width: 40%;
+    top: 17px;
+    width: 100%;
 }
 
 
@@ -1903,9 +1903,9 @@ a.back-to-top:focus {
     text-decoration: none;
     display: inline-block;
     margin: 4px 8px;
-   
-  }										  
-		
+}
+
+
 /*-- //nav login button --*/
 					
 					 
@@ -2232,8 +2232,8 @@ a.back-to-top:focus {
     display: block;
     text-align: center;
     border-radius: 4px;
-    padding: 12px;
-    font-size: 30px;
+    padding: 0px;
+    font-size: 15px;
     margin-right: 5px;
     transition: all 0.3s ease-in-out 0s;
     -moz-transition: all 0.3s ease-in-out 0s;
@@ -2590,7 +2590,7 @@ a.back-to-top:focus {
 
 .team-banner {
     width: 100%;
-    height: 650px;
+    height: 450px;
 }
 
 #main-slide .carousel-item img {
@@ -2744,4 +2744,105 @@ a.back-to-top:focus {
     background: rgba(255, 255, 255, 0.2);
     color: #fff;
     border-color: #fff;
+}
+
+.scroll-down {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    z-index: 100;
+    text-decoration: none;
+    text-shadow: 0;
+    width: 30px;
+    height: 30px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    z-index: 9;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%) rotate(45deg);
+    -moz-transform: translate(-50%, 0%) rotate(45deg);
+    transform: translate(-50%, 0%) rotate(45deg);
+    -webkit-animation: fade_move_down 4s ease-in-out infinite;
+    -moz-animation: fade_move_down 4s ease-in-out infinite;
+    animation: fade_move_down 4s ease-in-out infinite;
+}
+
+
+/*animated scroll arrow animation*/
+
+@-webkit-keyframes fade_move_down {
+    0% {
+        -webkit-transform: translate(0, -10px) rotate(45deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translate(0, 10px) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes fade_move_down {
+    0% {
+        -moz-transform: translate(0, -10px) rotate(45deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        -moz-transform: translate(0, 10px) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+@keyframes fade_move_down {
+    0% {
+        transform: translate(0, -10px) rotate(45deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0, 10px) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+
+/*-- Testimonials --*/
+
+
+/*-- Testimonials --*/
+
+.testimonial-title {
+    color: white !important;
+}
+
+.carousel {
+    background: #16253c;
+}
+
+.carousel-item {
+    text-align: center;
+    min-height: 280px;
+    /* Prevent carousel from being distorted if for some reason image doesn't load */
+}
+
+.bs-example {
+    margin: 20px;
+}
+
+.custom-box {
+    padding: 45px 45px;
+}
+
+.content-box {
+    font-size: 20px;
 }
