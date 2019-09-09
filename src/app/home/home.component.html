@@ -28,6 +28,9 @@
                     <p class="fadeInUp wow" data-wow-delay=".6s">Poker Sports League</p>
                     <h1 class="wow bounceIn heading" data-wow-delay=".7s">#Poker Coming Soon</h1>
                     <a href="javascript:void(0);" class="fadeInUp wow btn btn-border btn-lg" data-wow-delay=".8s" (click)="togglereg()" id="reg">Register Now! </a>
+                     <div *ngIf="!auth.isLoggedIn() && !user" class="nav-item">
+                        <button (click)="toggle()" id="btToggle" class="fadeInRight wow btn btn-border btn-lg" data-wow-delay=".6s">Login </button>
+                    </div>
                 </div>
             </div>
             <div class="carousel-item">
@@ -36,7 +39,10 @@
                     <p class="fadeInUp wow" data-wow-delay=".6s">Poker Sports League</p>
                     <h1 class="wow fadeInUp heading" data-wow-delay=".6s">Register Now for Season 3</h1>
 
-                    <a href="javascript:void(0);" class="fadeInUp wow btn btn-common btn-lg" data-wow-delay=".8s" (click)="togglereg()" id="reg">Register Now! </a>
+                    <a href="javascript:void(0);" class="fadeInUp wow btn btn-border btn-lg" data-wow-delay=".8s" (click)="togglereg()" id="reg">Register Now! </a>
+                     <div *ngIf="!auth.isLoggedIn() && !user" class="nav-item">
+                        <button (click)="toggle()" id="btToggle" class="fadeInRight wow btn btn-border btn-lg" data-wow-delay=".6s">Login </button>
+                    </div>
                 </div>
             </div>
         </div>
