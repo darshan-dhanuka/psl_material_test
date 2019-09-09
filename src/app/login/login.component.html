@@ -36,13 +36,22 @@ width:100% !important">
 
             </form>
             
-            		
+            	
             <div class="text-center social-btn" style="margin: 40px;">
                 <div class="or-seperator"><i>or</i></div>
-                <a href="#" class="btn btn-primary btn-block"><i class="fa fa-facebook"></i> Sign in with <b>Facebook</b></a>
-                <a href="javascript:void(0);" (click)="signInWithGoogle()" class="btn btn-danger btn-block"><i class="fa fa-google"></i> Sign in with <b>Google</b></a>
-            </div>
-
+                <div class="row">
+                    <div  class="col-lg-6 col-md-6 col-xs-12 col-sm-12 " style="padding-right: 44px;padding-left: 44px;">
+                        <a style=" text-transform: none; width: 230px; " href="#" class="btn btn-primary btn-block"><i class="fa fa-facebook"></i><span style="font-size: 17px;"> Sign in with <b>Facebook</b></span> </a>
+                    </div>
+                    <div  class="col-lg-6 col-md-6 col-xs-12 col-sm-12 " style="padding-right: 44px;
+                    padding-left: 44px;">
+                        <a style=" text-transform: none; width: 230px;" href="javascript:void(0);" (click)="signInWithGoogle()" class="btn btn-danger btn-block"><i class="fa fa-google"></i><span style="font-size: 17px;"> Sign in with <b>Google</b></span></a>
+                    </div>
+                </div>
+                
+                
+                
+            </div>	
             <!--div class=" bg-transparent text-center">
                 <div *ngIf="user" class="card text-center">
                         <button class="btn btn-danger" (click)="signOut()">Sign out</button>

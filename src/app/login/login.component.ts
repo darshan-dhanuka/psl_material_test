@@ -47,7 +47,9 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.auth.login(this.credentials).subscribe(
-      () => {
+      result => {
+        console.log(result);
+        
         document.getElementById('divshow2').style.display = 'none';
         this.router.navigateByUrl('#home')
         

@@ -60,8 +60,8 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown">
-  HOW TO APPLY
-       </a>
+                        HOW TO APPLY
+                    </a>
 
                     <ul class="dropdown-menu">
 
@@ -75,8 +75,8 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown">
-    MORE
-         </a>
+                        MORE
+                    </a>
 
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="home/#sponsors">PARTNERS</a></li>
@@ -84,6 +84,15 @@
                         <li><a class="dropdown-item" href="home/#contact">CONTACT US</a></li>
                     </ul>
                 </li>
+
+               
+                <li *ngIf="auth.isLoggedIn()" class="nav-item">
+                        <a href="javascript:void(0);" (click)="auth.logout()" class="nav-link">Logout &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i> </a>
+                </li>
+                <li *ngIf="user" class="nav-item">
+                    <a href="javascript:void(0);" (click)="signOut()" class="nav-link">Logout  &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i> </a>
+                </li>
+               
 
             </ul>
         </div>
