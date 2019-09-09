@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <base href="\">
-    <title>Grand - Event and Conference Template</title>
+    <title>Poker Sports League</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
@@ -22,9 +22,9 @@
     <!-- Main Style -->
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
     <link rel="stylesheet" type="text/css" href="styles.css" />
-	<link rel="stylesheet" href="assets/css/fontawesome-all.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <!-- Responsive Style -->
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
 
@@ -49,22 +49,22 @@
     <script src="assets/js/contact-form-script.min.js"></script>
 
     <script>
-            $(document).ready(function(){
-               setTimeout(function(){
-                  PopUp();
-               },1000); // 5000 to load it after 5 seconds from page load
-               function PopUp(){
-                    document.getElementById('div_popupbanner').style.display="block"; 
-                }
+        $(document).ready(function() {
+            setTimeout(function() {
+                PopUp();
+            }, 1000); // 5000 to load it after 5 seconds from page load
+            function PopUp() {
+                document.getElementById('div_popupbanner').style.display = "block";
+            }
 
-                $("#faqex1").on("hide.bs.collapse", function(){
-                    $("#faqtoggle").html('<p style="display: inline;font-size: 20px;cursor: pointer;" >MORE</p>&nbsp; <i style="font-size: 20px;" class="fa fa-angle-double-down"></i>');
-                });
-                $("#faqex1").on("show.bs.collapse", function(){
-                    $("#faqtoggle").html('<p style="display: inline;font-size: 20px;cursor: pointer;" >LESS</p>&nbsp; <i style="font-size: 20px;" class="fa fa-angle-double-up"></i>');
-                });
-
+            $("#faqex1").on("hide.bs.collapse", function() {
+                $("#faqtoggle").html('<p style="display: inline;font-size: 20px;cursor: pointer;" >MORE</p>&nbsp; <i style="font-size: 20px;" class="fa fa-angle-double-down"></i>');
             });
+            $("#faqex1").on("show.bs.collapse", function() {
+                $("#faqtoggle").html('<p style="display: inline;font-size: 20px;cursor: pointer;" >LESS</p>&nbsp; <i style="font-size: 20px;" class="fa fa-angle-double-up"></i>');
+            });
+
+        });
     </script>
 
 </body>
