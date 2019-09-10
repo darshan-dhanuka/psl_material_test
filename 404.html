@@ -28,7 +28,7 @@
     <!-- Responsive Style -->
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
 
-<link rel="stylesheet" href="styles.db02797d2b90a768ba66.css"></head>
+<link rel="stylesheet" href="styles.20ada82aaf1453a61b00.css"></head>
 
 <body>
 
@@ -54,7 +54,7 @@
                 PopUp();
             }, 1000); // 5000 to load it after 5 seconds from page load
             function PopUp() {
-                document.getElementById('div_popupbanner').style.display = "block";
+                //document.getElementById('div_popupbanner').style.display = "block";
             }
 
             $("#faqex1").on("hide.bs.collapse", function() {
@@ -64,9 +64,30 @@
                 $("#faqtoggle").html('<p style="display: inline;font-size: 20px;cursor: pointer;" >LESS</p>&nbsp; <i style="font-size: 20px;" class="fa fa-angle-double-up"></i>');
             });
 
+            $("#amit_burman").on("hide.bs.collapse", function() {
+                $("#amit_toggle").html('<span style="color:blue;">Read more</span>');
+            });
+            $("#amit_burman").on("show.bs.collapse", function() {
+                $("#amit_toggle").html('<span style="color:blue;">Less</span> ');
+            });
+
+            $("#pranav_bagai").on("hide.bs.collapse", function() {
+                $("#pranav_toggle").html('<span style="color:blue;">Read more</span>');
+            });
+            $("#pranav_bagai").on("show.bs.collapse", function() {
+                $("#pranav_toggle").html('<span style="color:blue;">Less</span> ');
+            });
+
+            $("#a_g").on("hide.bs.collapse", function() {
+                $("#ag_toggle").html('<span style="color:blue;">Read more</span>');
+            });
+            $("#a_g").on("show.bs.collapse", function() {
+                $("#ag_toggle").html('<span style="color:blue;">Less</span> ');
+            });
+
         });
     </script>
 
-<script src="runtime-es2015.703a23e48ad83c851e49.js" type="module"></script><script src="polyfills-es2015.4d31cca2afc45cfd85b5.js" type="module"></script><script src="runtime-es5.465c2333d355155ec5f3.js" nomodule></script><script src="polyfills-es5.03d8c9fc4ed8e610412b.js" nomodule></script><script src="main-es2015.cf0fb1e54b76f2e87d77.js" type="module"></script><script src="main-es5.523f82193bcada56a3ac.js" nomodule></script></body>
+<script src="runtime-es2015.703a23e48ad83c851e49.js" type="module"></script><script src="polyfills-es2015.4d31cca2afc45cfd85b5.js" type="module"></script><script src="runtime-es5.465c2333d355155ec5f3.js" nomodule></script><script src="polyfills-es5.03d8c9fc4ed8e610412b.js" nomodule></script><script src="main-es2015.e935a99ed04948463d6a.js" type="module"></script><script src="main-es5.315906aae1d7adcaac0f.js" nomodule></script></body>
 
 </html>
