@@ -3,7 +3,7 @@ import { AuthenticationService, TokenPayload } from '../authentication.service';
 import { Router } from '@angular/router';
 import { AuthService } from 'angularx-social-login';
 import { SocialUser } from 'angularx-social-login';
-
+import { DataService } from "../data.service";
 import { GoogleLoginProvider} from 'angularx-social-login';
 
 const newLocal = 'block';
@@ -16,10 +16,11 @@ const newLocal = 'block';
 export class LoginComponent implements OnInit {
   public show_dialog : boolean = true;
   public show_reg : boolean = false;
-  public button_name : any = 'Show Login Form!';
+  public social_var : any ;
   public errorvar;
-
+  message:string;
   user: SocialUser;
+  
   credentials: TokenPayload = {
     id: 0,
     name: '',
@@ -36,7 +37,7 @@ export class LoginComponent implements OnInit {
     referral_code: ""
   }
 
-  constructor(public auth: AuthenticationService, private router: Router, private authService: AuthService ) {}
+  constructor(public auth: AuthenticationService, private router: Router, private authService: AuthService,private data: DataService ) {}
 
   ngOnInit() {
     this.authService.authState.subscribe((user) => {
@@ -48,8 +49,8 @@ export class LoginComponent implements OnInit {
   login() {
     this.auth.login(this.credentials).subscribe(
       result => {
-        console.log(result);
-        
+        //console.log(result['name']);
+        this.data.changeMessage(result['name']);
         document.getElementById('divshow2').style.display = 'none';
         this.router.navigateByUrl('#home')
         
@@ -69,9 +70,10 @@ export class LoginComponent implements OnInit {
     );*/
 
     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID).then(
-      () => {
-        //alert("Welcome");
-        this.socialsignin(this.user);
+      result => {
+        //console.log(result);
+        this.social_var = result;
+        this.socialsignin(result);
       },
       err => {
         console.error(err);
@@ -85,6 +87,8 @@ export class LoginComponent implements OnInit {
     //console.log(user.email);
     this.auth.sociallogin(user).subscribe(
       () => {
+        //console.log(this.social_var.firstName);
+        this.data.changeMessage(this.social_var.firstName);
         document.getElementById('divshow2').style.display = 'none';
         this.router.navigateByUrl('#home')
         

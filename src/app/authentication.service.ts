@@ -120,6 +120,7 @@ export class AuthenticationService {
     this.token = ''
     window.localStorage.removeItem('usertoken')
     this.router.navigateByUrl('/')
+    window.location.reload();
   }
 
   public getStates(): Observable<any> {

@@ -84,12 +84,25 @@
                     </li>
 
 
-                    <li *ngIf="auth.isLoggedIn()" class="nav-item">
-                        <a href="javascript:void(0);" (click)="auth.logout()" class="nav-link">Logout &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i> </a>
-                    </li>
-                    <li *ngIf="user" class="nav-item">
-                        <a href="javascript:void(0);" (click)="signOut()" class="nav-link">Logout  &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i> </a>
-                    </li>
+                    <li *ngIf="auth.isLoggedIn()" class="nav-item dropdown">
+                        <span class="nav-link dropdown-toggle" [innerHTML]="message" style="text-transform:none;color:#a2bbe2;" data-toggle="dropdown" > </span>
+                        <ul class="dropdown-menu">
+                                <li>
+                                    <a href="javascript:void(0);" (click)="auth.logout()" class="dropdown-item" style="text-transform:none">Logout &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i> </a>
+                                </li>
+                        </ul>
+                        
+                </li>
+               
+                <li *ngIf="user" class="nav-item dropdown">
+                        <span class="nav-link dropdown-toggle" [innerHTML]="message" style="text-transform:none;color:#a2bbe2;" data-toggle="dropdown"> </span>
+                        <ul class="dropdown-menu">
+                            <li>
+                                    <a href="javascript:void(0);" (click)="signOut()" class="dropdown-item" style="text-transform:none">Logout  &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i> </a>
+                            </li>
+                        </ul>
+                        
+                </li>
 
                 </ul>
             </div>
@@ -167,12 +180,25 @@ NEWS/MEDIA
             </li>
 
 
-            <li *ngIf="auth.isLoggedIn()" class="nav-item">
-                <a href="javascript:void(0);" (click)="auth.logout()" class="nav-link">Logout &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i> </a>
-            </li>
-            <li *ngIf="user" class="nav-item">
-                <a href="javascript:void(0);" (click)="signOut()" class="nav-link">Logout  &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i> </a>
-            </li>
+            <li *ngIf="auth.isLoggedIn()" class="nav-item dropdown">
+                        <span class="nav-link dropdown-toggle" [innerHTML]="message" style="text-transform:none;color:#a2bbe2;" data-toggle="dropdown" > </span>
+                        <ul class="dropdown-menu">
+                                <li>
+                                    <a href="javascript:void(0);" (click)="auth.logout()" class="dropdown-item" style="text-transform:none">Logout &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i> </a>
+                                </li>
+                        </ul>
+                        
+			</li>
+		   
+			<li *ngIf="user" class="nav-item dropdown">
+					<span class="nav-link dropdown-toggle" [innerHTML]="message" style="text-transform:none;color:#a2bbe2;" data-toggle="dropdown"> </span>
+					<ul class="dropdown-menu">
+						<li>
+								<a href="javascript:void(0);" (click)="signOut()" class="dropdown-item" style="text-transform:none">Logout  &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i> </a>
+						</li>
+					</ul>
+					
+			</li>
         </ul>
         <!-- Mobile Menu End -->
 

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AuthenticationService } from './authentication.service';
+import { DataService } from './data.service';
 import { AuthGuardService } from './auth-guard.service';
 
 import {FooterComponent} from './footer/footer.component';
@@ -48,7 +49,7 @@ import { NewsComponent } from './news/news.component';
 import { VideosComponent } from './videos/videos.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { PreviousSeasonsComponent } from './previous-seasons/previous-seasons.component';
-
+import { StorageServiceModule} from 'angular-webstorage-service';
 
 import { BsDatepickerModule} from 'ngx-bootstrap/datepicker';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -130,9 +131,10 @@ export function provideConfig() {
 	SocialLoginModule,
     BsDatepickerModule.forRoot(),
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    StorageServiceModule
   ],
-  providers: [AuthenticationService, AuthGuardService,
+  providers: [AuthenticationService, AuthGuardService, DataService,
     {
       provide: AuthServiceConfig,
       useFactory: provideConfig
