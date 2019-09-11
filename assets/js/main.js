@@ -12,8 +12,10 @@
     $(window).on('scroll', function() {
         if ($(window).scrollTop() > 200) {
             $('.scrolling-navbar').addClass('top-nav-collapse');
+            $('#nav_header-top').addClass('top-nav-header-collapse');
         } else {
             $('.scrolling-navbar').removeClass('top-nav-collapse');
+            $('#nav_header-top').removeClass('top-nav-header-collapse');
         }
     });
 
