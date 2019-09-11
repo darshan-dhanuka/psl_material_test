@@ -27,15 +27,7 @@
 <body>
     <header class="header">
         <app-navigation></app-navigation>
-        <nav>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-6 col-sm-2 col-lg-3 logo">
-                        <a href="/index.html"><img src="https://d3rrji2dvvcisw.cloudfront.net/images/logo1.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        
     </header>
     <section class="subPagebanner">
         <div class="">
@@ -178,114 +170,26 @@
 
 
 
-    <footer>
-        <div class="footerNav">
+ 
+<!-- Footer Section Start -->
 
+<app-footer></app-footer>
 
-        </div>
-        <div class="allrights">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">©Poker Sports League. All Rights Reserved</div>
+<!-- Footer Section End -->
+
+<div id="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="site-info">
+                    <p>© Poker Sports League</p>
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89502683-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+    </div>
+</div>
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-89502683-1');
-    </script>
-
-    <script data-obct type="text/javascript">
-        /** DO NOT MODIFY THIS CODE**/ ! function(_window, _document) {
-            var OB_ADV_ID = '00fabbc9c397955804969747d2789f994b';
-            if (_window.obApi) {
-                var toArray = function(object) {
-                    return Object.prototype.toString.call(object) === '[object Array]' ? object : [object];
-                };
-                _window.obApi.marketerId = toArray(_window.obApi.marketerId).concat(toArray(OB_ADV_ID));
-                return;
-            }
-            var api = _window.obApi = function() {
-                api.dispatch ? api.dispatch.apply(api, arguments) : api.queue.push(arguments);
-            };
-            api.version = '1.1';
-            api.loaded = true;
-            api.marketerId = OB_ADV_ID;
-            api.queue = [];
-            var tag = _document.createElement('script');
-            tag.async = true;
-            tag.src = '//amplify.outbrain.com/cp/obtp.js';
-            tag.type = 'text/javascript';
-            var script = _document.getElementsByTagName('script')[0];
-            script.parentNode.insertBefore(tag, script);
-        }(window, document);
-        obApi('track', 'PAGE_VIEW');
-    </script>
-
-    <img src='//pixel.mathtag.com/event/img?mt_id=1334628&mt_adid=208364&mt_exem=&mt_excl=&v1=&v2=&v3=&s1=&s2=&s3=' width='1' height='1' />
-    <!-- Facebook Pixel Code -->
-    <script>
-        ! function(f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function() {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '555586341482250');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=555586341482250&ev=PageView&noscript=1"
-/></noscript>
-    <!-- End Facebook Pixel Code -->
-    <script src="https://d3rrji2dvvcisw.cloudfront.net/js/jquery.min.js"></script>
-    <script src="https://d3rrji2dvvcisw.cloudfront.net/js/owl.carousel.js"></script>
-    <script src="https://d3rrji2dvvcisw.cloudfront.net/js/main.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            $('.innerWrapper .gloglebggray .row').each(function() {
-                var getval = $(this).children('.col-xs-6').length;
-                if ($(this).children('.col-xs-6').length == 2) {
-                    $(this).children('.col-xs-6:last-child').addClass('pull-right');
-                }
-                if ($(this).children('.col-xs-6').length == 3) {
-                    $(this).children('.col-xs-6:last-child').addClass('pull-right');
-                    $(this).children('.col-xs-6:nth-child(2)').addClass('nofloatblock');
-                }
-
-            })
-
-        })
-    </script>
-    <script>
-        $("a[href='#top']").click(function() {
-            $("html, body").animate({
-                scrollTop: 0
-            }, "slow");
-            return false;
-        });
-    </script>
+<!-- Go to Top Link -->
 
 
 </body>
