@@ -748,7 +748,7 @@ a.back-to-top:focus {
     padding: 0;
     display: none;
     position: absolute;
-    z-index: 99;
+    z-index: 600;
     min-width: 210px;
     background-color: #fff;
     white-space: nowrap;
@@ -1741,6 +1741,7 @@ a.back-to-top:focus {
 #mySidenav a {
     position: fixed;
     right: 11px;
+   
     transition: 0.3s;
     padding: 15px;
     text-decoration: none;
@@ -1775,7 +1776,7 @@ a.back-to-top:focus {
 }
 
 #reg {
-    z-index: 1000;
+    z-index: 500;
     top: 170px;
 }
 
@@ -1905,8 +1906,8 @@ a.back-to-top:focus {
 }
 
 .nav-reg-btn {
-    background: #018e3f;
-    border: 2px solid #42c539;
+    background: #c2a455;;
+    border: 2px solid #0c254c;
     border-radius: 20px;
     color: #fff;
     cursor: pointer;
@@ -2557,6 +2558,7 @@ a.back-to-top:focus {
 #main-slide .carousel-control-prev {
     opacity: 1;
     box-shadow: none;
+    right: 5%;
 }
 
 #main-slide .carousel-control-prev span {
