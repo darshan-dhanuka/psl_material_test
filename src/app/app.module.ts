@@ -17,7 +17,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { SocialLoginModule } from 'angularx-social-login';
-import { AuthServiceConfig, GoogleLoginProvider  } from 'angularx-social-login';
+import { AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider} from 'angularx-social-login';
 import { AndhraBulletsComponent } from './andhra-bullets/andhra-bullets.component';
 import { BengaluruWarriorsComponent } from './bengaluru-warriors/bengaluru-warriors.component';
 import { ChennaiThalaivasComponent } from './chennai-thalaivas/chennai-thalaivas.component';
@@ -64,10 +64,10 @@ const config = new AuthServiceConfig([
     id: GoogleLoginProvider.PROVIDER_ID,
     provider: new GoogleLoginProvider('230059724929-7cusacc7jktuajmot7tjl0adu0u01co7.apps.googleusercontent.com')
   },
-  // {
-  //   id: FacebookLoginProvider.PROVIDER_ID,
-  //   provider: new FacebookLoginProvider('561602290896109')
-  // },
+   {
+     id: FacebookLoginProvider.PROVIDER_ID,
+     provider: new FacebookLoginProvider('2490212537927203')
+   },
   // {
   //   id: LinkedInLoginProvider.PROVIDER_ID,
   //   provider: new LinkedInLoginProvider("78iqy5cu2e1fgr")

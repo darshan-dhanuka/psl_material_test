@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { AuthService } from 'angularx-social-login';
 import { SocialUser } from 'angularx-social-login';
 import { DataService } from "../data.service";
-import { GoogleLoginProvider} from 'angularx-social-login';
+import { GoogleLoginProvider,FacebookLoginProvider} from 'angularx-social-login';
 
 const newLocal = 'block';
 @Component({
@@ -43,7 +43,10 @@ export class LoginComponent implements OnInit {
     this.authService.authState.subscribe((user) => {
       this.user = user;
       //console.log(user);
+     
     });
+
+    //this.data.currentMessage.subscribe(message => this.message = message);
   }
 
   login() {
@@ -53,7 +56,7 @@ export class LoginComponent implements OnInit {
         this.data.changeMessage(result['name']);
         document.getElementById('divshow2').style.display = 'none';
         this.router.navigateByUrl('#home')
-        
+        window.location.reload();
        
       },
       err => {
@@ -77,10 +80,29 @@ export class LoginComponent implements OnInit {
       },
       err => {
         console.error(err);
-        alert("Invalid Credentials!");
+        //alert("Invalid Credentials!");
       }
     )
   }
+
+  signInWithFB(): void {
+    /* this.authService.signIn(GoogleLoginProvider.PROVIDER_ID).then(
+       x => console.log(x)
+ 
+     );*/
+ 
+     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID).then(
+       result => {
+         //console.log(result);
+         this.social_var = result;
+         this.socialsignin(result);
+       },
+       err => {
+         console.error(err);
+         //alert("Invalid Credentials!");
+       }
+     )
+   }
 
   socialsignin(user)
   {
@@ -90,7 +112,8 @@ export class LoginComponent implements OnInit {
         //console.log(this.social_var.firstName);
         this.data.changeMessage(this.social_var.firstName);
         document.getElementById('divshow2').style.display = 'none';
-        this.router.navigateByUrl('#home')
+        //this.router.navigateByUrl('#home');
+        window.location.reload();
         
        
       },
@@ -100,11 +123,14 @@ export class LoginComponent implements OnInit {
     );
   }
 
+
   
   
 
   signOut(): void {
     this.authService.signOut();
+    this.data.changeMessage('');
+    window.location.reload();
   }
   toggle() {
     //console.log();

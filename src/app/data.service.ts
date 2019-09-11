@@ -15,7 +15,7 @@ export class DataService {
     this.saveInLocal('message',message);
   }
   saveInLocal(key, val): void {
-    console.log('recieved= key:' + key + 'value:' + val);
+    //console.log('inside saveinlocal===== key:' + key + 'value:' + val);
     this.storage.set(key, val);
     this.data[key]= this.storage.get(key);
    }

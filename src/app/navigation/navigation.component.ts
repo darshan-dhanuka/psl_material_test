@@ -38,6 +38,7 @@ export class NavigationComponent implements OnInit {
 
   signOut(): void {
     this.authService.signOut();
+    this.data.changeMessage('');
     window.location.reload();
   }
 

@@ -5,6 +5,7 @@ import { map } from 'rxjs/operators'
 import { Router } from '@angular/router'
 import { throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { DataService } from "./data.service";
 
 export interface UserDetails {
   id: number
@@ -45,7 +46,7 @@ export interface TokenPayload {
 export class AuthenticationService {
   private token: string
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient, private router: Router, private data: DataService) {}
 
   private saveToken(token: string): void {
     localStorage.setItem('usertoken', token)
@@ -120,6 +121,7 @@ export class AuthenticationService {
     this.token = ''
     window.localStorage.removeItem('usertoken')
     this.router.navigateByUrl('/')
+    this.data.changeMessage('');
     window.location.reload();
   }
 
