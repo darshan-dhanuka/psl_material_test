@@ -1,60 +1,190 @@
-<!-- Main Carousel Section Start -->
+
 
 <app-navigation></app-navigation>
 <header id="header-wrap">
-    
-    <div id="main-slide" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#main-slide" data-slide-to="0" class="active"></li>
-            <li data-target="#main-slide" data-slide-to="1"></li>
-            <li data-target="#main-slide" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="assets/img/slider/slide1.jpg" alt="First slide">
-                <div class="carousel-caption d-md-block">
-                    <p class="fadeInUp wow" data-wow-delay=".6s">Poker Sports League</p>
-                    <h1 class="wow fadeInDown heading" data-wow-delay=".4s">India's first Poker League</h1>
-                    <a href="javascript:void(0);" class="fadeInUp wow btn btn-border btn-lg" data-wow-delay=".8s" (click)="togglereg()" id="reg">Register Now! </a>
-                    <div *ngIf="!auth.isLoggedIn() && !user" class="nav-item">
-                        <button (click)="toggle()" id="btToggle" class="fadeInRight wow btn btn-border btn-lg" data-wow-delay=".6s">Login </button>
-                    </div>
+</header>
+<!-- Main Carousel Section Start -->
+<section style="margin-top: 7%;">
+       
+                <div id="main-slide" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#main-slide" data-slide-to="0" class="active"></li>
+                            <li data-target="#main-slide" data-slide-to="1"></li>
+                            <li data-target="#main-slide" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="assets/img/slider/slide1.jpg" alt="First slide">
+                                <div class="carousel-caption d-md-block">
+                                    <!--p class="fadeInUp wow" data-wow-delay=".6s">Poker Sports League</p>
+                                    <h1 class="wow fadeInDown heading" data-wow-delay=".4s">India's first Poker League</h1>
+                                    <a href="javascript:void(0);" class="fadeInUp wow btn btn-border btn-lg" data-wow-delay=".8s" (click)="togglereg()" id="reg">Register Now! </a>
+                                    <div *ngIf="!auth.isLoggedIn() && !user" class="nav-item">
+                                        <button (click)="toggle()" id="btToggle" class="fadeInRight wow btn btn-border btn-lg" data-wow-delay=".6s">Login </button>
+                                    </div-->
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="assets/img/slider/slide2.jpg" alt="Second slide">
+                                <div class="carousel-caption d-md-block">
+                                    <!--p class="fadeInUp wow" data-wow-delay=".6s">Poker Sports League</p>
+                                    <h1 class="wow bounceIn heading" data-wow-delay=".7s">11 Teams Around India Compete for the Ultimate Prize</h1>
+                                    <a href="javascript:void(0);" class="fadeInUp wow btn btn-border btn-lg" data-wow-delay=".8s" (click)="togglereg()" id="reg">Register Now! </a>
+                                    <div *ngIf="!auth.isLoggedIn() && !user" class="nav-item">
+                                        <button (click)="toggle()" id="btToggle" class="fadeInRight wow btn btn-border btn-lg" data-wow-delay=".6s">Login </button>
+                                    </div-->
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="assets/img/slider/slide3.jpg" alt="Third slide">
+                                <div class="carousel-caption d-md-block">
+                                    <!--p class="fadeInUp wow" data-wow-delay=".6s">Poker Sports League</p>
+                                    <h1 class="wow fadeInUp heading" data-wow-delay=".6s">Register Now for Season3!</h1>
+                                    <a href="javascript:void(0);" class="fadeInUp wow btn btn-border btn-lg" data-wow-delay=".8s" (click)="togglereg()" id="reg">Register Now! </a>
+                                    <div *ngIf="!auth.isLoggedIn() && !user" class="nav-item">
+                                        <button (click)="toggle()" id="btToggle" class="fadeInRight wow btn btn-border btn-lg" data-wow-delay=".6s">Login </button>
+                                    </div-->
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#main-slide" role="button" data-slide="prev">
+                            <span class="carousel-control" aria-hidden="true"><i class="lni-chevron-left"></i></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#main-slide" role="button" data-slide="next">
+                            <span class="carousel-control" aria-hidden="true"><i class="lni-chevron-right"></i></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                </div>
+            
+</section>
+<!-- Main Carousel Section End -->
+
+<!--Static register form Start-->
+<div class="psl_banner_registerbg">
+        <!--div class="psl_banner_title">
+            <h5><span>Register Now</span></h5>
+        </div-->
+        <div class="psl_banner_registernow" id="reg_model">
+            <h3>Register for Free</h3>
+            <div id="errormessegehere"></div>
+            <form autocomplete="off" id="registernow_form">
+                <input type="hidden" name="_csrf" value="1UP3zIXE-YQYzozJmIPxx-5HobKUoeKBzfJg"> 
+                <div class="form-group error_form_group" id="userName_label">
+                     <input type="text" class="form-control checkIfvalid checkIfvalidError" placeholder="Username" attr-span="#userName_span" attr-label="#userName_label" attr-type="PLAYER_NICKNAME_FREE" name="username" required="" autocomplete="off">
+                     <span class="errorClass" id="userName_span" style="display: inline;">Username Empty</span>
+                </div>
+                <div class="form-group" id="password_label">
+                    <input class="form-control checkIfvalid" type="password" placeholder="Password" attr-label="#password_label" attr-span="#password_span" attr-type="PLAYER_PASSWORD" name="password" required="" autocomplete="off">
+                    <i class="fa fa-info pwd_info" data-placement="bottom" data-toggle="tooltip" title="Password must contain uppercase letter lowercase letter and a number and length of atlest 5"></i>
+                    <span class="errorClass" id="password_span">Invalid Password</span>
+                </div>
+                <div class="form-group" id="email_label">
+                    <input type="email" class="form-control checkIfvalid" placeholder="Email" attr-label="#email_label" attr-span="#email_span" attr-type="PLAYER_EMAIL_FREE" name="email" required="">
+                    <span class="errorClass" id="email_span">Invalid Email</span>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="confirm_terms" id="checkbox_confirm"><span>I Confirm that I have read and accepted all the Rules and Conditions.</span></label>
+                    <span class="errorClass" id="confirm_check_span">Please Confirm Terms</span>
+                </div>
+                <div class="form-group mb-0 text-center">
+                    <button type="submit" class="btn signup_btn" id="registernow_btn" disabled="">NEXT</button>
+                </div>
+            </form>
+        </div>
+        <div style="display:none;" class="psl_banner_registernow" id="otp_modal">
+            <h3>You are one step away to getting started!</h3>
+            <form autocomplete="off" id="registernow3_form">
+                <div class="form-group" id="phone_label">
+                    <input type="text" class="form-control checkIfvalid" placeholder="Phone number" attr-label="#phone_label" attr-span="#phone_span" attr-type="PLAYER_PHONE" name="number" id="myPhoneNumber" required="">
+                    <div class="sendotp_btn" id="sendotp_btn">Send OTP</div>
+                    <span class="errorClass" id="phone_span">Invalid Phone</span>
+                </div>
+                <div class="form-group" id="otp_label">
+                    <input type="text" class="form-control" placeholder="OTP" attr-label="#otp_label" attr-span="#otp_span" attr-type="PLAYER_OTP" autocomplete="off" id="myOtp" name="otp">
+                     <span class="errorClass" id="otp_span">Otp Empty</span>
+                    <span class="sucessClass" id="phone_span_s"></span>
+                </div>
+                <div class="form-group" id="promo_label">
+                    <input type="text" class="form-control removeErrorClass" attr-label="#promo_label" attr-span="#promo_span" placeholder="Have a promo code?" name="promocode">
+                    <span class="errorClass" id="promo_span">Invalid promocode</span>
+                </div>
+                <div class="form-group" id="promocode-input-refral">
+                    <input type="text" class="form-control checkIfvalid" placeholder="Have a referral code?" attr-label="#promocode-input-refral" attr-span="#refral_span" attr-type="PLAYER_LOGIN_FREE_NOT" name="referredBy">
+                    <span class="errorClass" id="refral_span">Invalid Refral</span>
+                </div>
+                <div class="form-group mb-0 text-center">
+                    <button type="submit" class="btn signup_btn" id="registernow_btn_otp" disabled="">Signup</button>
+                </div>
+            </form>
+        </div>
+    </div>
+<!--Static register form End-->
+
+
+<!-- Counter Area Start-->
+<section class="counter-section">
+    <div class="container">
+        <div class="row">
+            <!-- Counter Item -->
+            <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
+                <div class="counter wow fadeInRight" data-wow-delay="0.3s">
+                    <!--div class="icon"> 
+                    <img src="assets/img/users.png" class="img-fluid team-img" alt="" href='#top' style="max-width: 30%"/></div-->
+                    <p>11
+                    </p>
+                    <span>PARTICIPATING
+                      TEAMS</span>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="assets/img/slider/slide2.jpg" alt="Second slide">
-                <div class="carousel-caption d-md-block">
-                    <p class="fadeInUp wow" data-wow-delay=".6s">Poker Sports League</p>
-                    <h1 class="wow bounceIn heading" data-wow-delay=".7s">11 Teams Around India Compete for the Ultimate Prize</h1>
-                    <a href="javascript:void(0);" class="fadeInUp wow btn btn-border btn-lg" data-wow-delay=".8s" (click)="togglereg()" id="reg">Register Now! </a>
-                    <div *ngIf="!auth.isLoggedIn() && !user" class="nav-item">
-                        <button (click)="toggle()" id="btToggle" class="fadeInRight wow btn btn-border btn-lg" data-wow-delay=".6s">Login </button>
-                    </div>
+            <!-- Counter Item -->
+            <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
+                <div class="counter wow fadeInRight" data-wow-delay="0.6s">
+                    <!--div class="icon"> <img src="assets/img/single-user.png" class="img-fluid team-img" alt="" href='#top' /></div-->
+                    <p>110
+                    </p>
+                    <span>PARTICIPATING
+                      PLAYERS</span>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="assets/img/slider/slide3.jpg" alt="Third slide">
-                <div class="carousel-caption d-md-block">
-                    <p class="fadeInUp wow" data-wow-delay=".6s">Poker Sports League</p>
-                    <h1 class="wow fadeInUp heading" data-wow-delay=".6s">Register Now for Season3!</h1>
-                    <a href="javascript:void(0);" class="fadeInUp wow btn btn-border btn-lg" data-wow-delay=".8s" (click)="togglereg()" id="reg">Register Now! </a>
-                    <div *ngIf="!auth.isLoggedIn() && !user" class="nav-item">
-                        <button (click)="toggle()" id="btToggle" class="fadeInRight wow btn btn-border btn-lg" data-wow-delay=".6s">Login </button>
-                    </div>
+            <!-- Counter Item -->
+            <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
+														 
+																						
+																																											  
+                <div class="counter wow fadeInRight" data-wow-delay="0.9s">
+                    <!--div class="icon"> <img src="assets/img/usersquali.png" class="img-fluid team-img" alt="" href='#top' /></div-->
+                    <p>150+
+                    </p>
+                    <span> FREE
+                      QUALIFIERS</span>
+                </div>
+            </div>
+            <!-- Counter Item -->
+            <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
+														 
+																						
+																										
+                <div class="counter wow fadeInRight" data-wow-delay="1.2s">
+                    <!--div class="icon"> <img src="assets/img/money.png" class="img-fluid team-img" alt="" href='#top' /></div-->
+                    <p>5
+                    </p>
+                    <span> CRORES
+                      PRIZE POOL</span>
                 </div>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#main-slide" role="button" data-slide="prev">
-            <span class="carousel-control" aria-hidden="true"><i class="lni-chevron-left"></i></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#main-slide" role="button" data-slide="next">
-            <span class="carousel-control" aria-hidden="true"><i class="lni-chevron-right"></i></span>
-            <span class="sr-only">Next</span>
-        </a>
+																							
+																									 
+												 
+			
+																							
+																									  
+											 
+			
     </div>
-</header>
-<!-- Main Carousel Section End -->
+</section>
+<!-- Counter Area End-->
 
 
 <!-- Header Area wrapper End -->
@@ -80,54 +210,7 @@
     <app-popup-banner></app-popup-banner>
 </div>
 <!--Popup banner div end-->
-<!-- Counter Area Start-->
-<section class="counter-section section-padding">
-        <div class="container">
-            <div class="row">
-                <!-- Counter Item -->
-                <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
-                    <div class="counter wow fadeInRight" data-wow-delay="0.3s">
-                        <div class="icon"> <img src="assets/img/users.png" class="img-fluid team-img" alt="" href='#top' /></div>
-                        <p>11
-                        </p>
-                        <span>PARTICIPATING
-                          TEAMS</span>
-                    </div>
-                </div>
-                <!-- Counter Item -->
-                <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
-                    <div class="counter wow fadeInRight" data-wow-delay="0.6s">
-                        <div class="icon"> <img src="assets/img/single-user.png" class="img-fluid team-img" alt="" href='#top' /></div>
-                        <p>110
-                        </p>
-                        <span>PARTICIPATING
-                          PLAYERS</span>
-                    </div>
-                </div>
-                <!-- Counter Item -->
-                <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
-                    <div class="counter wow fadeInRight" data-wow-delay="0.9s">
-                        <div class="icon"> <img src="assets/img/usersquali.png" class="img-fluid team-img" alt="" href='#top' /></div>
-                        <p>150+
-                        </p>
-                        <span> FREE
-                          QUALIFIERS</span>
-                    </div>
-                </div>
-                <!-- Counter Item -->
-                <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
-                    <div class="counter wow fadeInRight" data-wow-delay="1.2s">
-                        <div class="icon"> <img src="assets/img/money.png" class="img-fluid team-img" alt="" href='#top' /></div>
-                        <p>5
-                        </p>
-                        <span> CRORES
-                          PRIZE POOL</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Counter Area End-->
+						
 <!---floating icon-->
 <div id="mySidenav" class="sidenav">
     <div class="">
@@ -139,6 +222,27 @@
 </div>
 
 <!---floating icon-->
+
+<!-- Coundown Section Start -->
+<section class="countdown-timer section-padding">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="heading-count">
+                    <h2 class="wow fadeInDown" data-wow-delay="0.2s">Event Will Start In</h2>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="row time-countdown justify-content-center wow fadeInUp" data-wow-delay="0.2s">
+                    <div id="clock" class="time-count"></div>
+                </div>
+                <!--a href="pricing.html" class="btn btn-common wow fadeInUp" data-wow-delay="0.3s">Add to My Calender</a-->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Coundown Section End -->
+
 
 
 

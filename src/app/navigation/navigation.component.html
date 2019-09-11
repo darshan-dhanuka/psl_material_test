@@ -1,210 +1,264 @@
 <!-- Header Area wrapper Starts -->
 
 <!-- Navbar Start -->
-<nav class="top-nav"></nav>
-<nav class="navbar navbar-expand-lg fixed-top scrolling-navbar">
-    
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button class="navbar-toggler" style= "color: #fff;" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        <span class="icon-menu"></span>
-        <span class="icon-menu"></span>
-        <span class="icon-menu"></span>
-      </button>
-            <a href="index.html" class="navbar-brand"><img src="" alt=""></a>
-        </div>
-        <div class="collapse navbar-collapse" id="main-navbar">
-            <ul class="navbar-nav mr-auto w-100 justify-content-end">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">
-            HOME
-          </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="home/#about">
-            ABOUT US
-          </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="home/#schedules">
-            PSL CALENDER
-          </a>
-                </li>
+<nav style="    z-index: 999;
+position: fixed;
+top: 0;
+left: 0;
+right: 0; ">
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown">
-                    TEAMS
-     </a>
-
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" routerLink="/psl-teams" routerLinkActive="router-link-active" href='#top'>PSL Teams</a></li>
-                        <li><a class="dropdown-item" routerLink="/player-profile" routerLinkActive="router-link-active" href='#top'>PLAYER PROFILE</a></li>
-
-                    </ul>
-                </li>
-
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown">
-  NEWS/MEDIA
-       </a>
-
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" routerLink="/news" routerLinkActive="router-link-active" href='#top'>NEWS</a></li>
-                        <li><a class="dropdown-item" routerLink="/videos" routerLinkActive="router-link-active" href='#top'>VIDEOS</a></li>
-                        <li><a class="dropdown-item" href="home/#gallery">EVENT GALLERY</a></li>
-                        <li><a class="dropdown-item" routerLink="/previous-seasons" routerLinkActive="router-link-active" href='#top'>PREVIOUS SEASONS</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown">
-                        HOW TO APPLY
-                    </a>
-
-                    <ul class="dropdown-menu">
-
-                        <li><a class="dropdown-item" routerLink="/how-to-play" routerLinkActive="router-link-active" href='#top'>HOW TO APPLY</a></li>
-                        <li><a class="dropdown-item" routerLink="/qualifier" routerLinkActive="router-link-active" href='#top'>BE A QUALIFIER</a></li>
-                        <li><a class="dropdown-item" routerLink="/pro" routerLinkActive="router-link-active" href='#top'>BE A PRO</a></li>
-                        <li><a class="dropdown-item" routerLink="/mentor" routerLinkActive="router-link-active" href='#top'>BE A MENTOR</a></li>
-                    </ul>
-                </li>
-
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown">
-                        MORE
-                    </a>
-
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" routerLink="/league-structure" routerLinkActive="router-link-active" href='#top'>LEAGUE STRUCTURE</a></li>
-                        <li><a class="dropdown-item" href="home/#sponsors">PARTNERS</a></li>
-                        <li><a class="dropdown-item" href="home/#faq">FAQ's</a></li>
-                        <li><a class="dropdown-item" href="home/#contact">CONTACT US</a></li>
-                    </ul>
-                </li>
-
-
-                <li *ngIf="auth.isLoggedIn()" class="nav-item dropdown">
-                    <span class="nav-link dropdown-toggle" [innerHTML]="message" style="text-transform:none;color:#a2bbe2;" data-toggle="dropdown"> </span>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="javascript:void(0);" (click)="auth.logout()" class="dropdown-item" style="text-transform:none">Logout &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i> </a>
-                        </li>
-                    </ul>
-
-                </li>
-
-                <li *ngIf="user" class="nav-item dropdown">
-                    <span class="nav-link dropdown-toggle" [innerHTML]="message" style="text-transform:none;color:#a2bbe2;" data-toggle="dropdown"> </span>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="javascript:void(0);" (click)="signOut()" class="dropdown-item" style="text-transform:none">Logout  &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i> </a>
-                        </li>
-                    </ul>
-
-                </li>
-
-            </ul>
-        </div>
+<!-- Navbar Top header Start -->
+    <div id="nav_header-top" class="header_top" > 
+            <div class="header_container">
+                <div class="head_right ">
+                    
+                    <div class="psl_contact_info">
+                        <a href="tel:+91 8322987777 "><i class="fa fa-phone"></i> <em>+91 8322987777 </em></a>
+                    </div>
+                    <div class="psl_contact_info">
+                        <a href="mailto: info@pokersportsleague.com "><i class="fa fa-envelope"></i> <em> info@pokersportsleague.com </em></a>
+                    </div>
+                    <div class="headsocial_list">
+                        <ul>
+                            <li><a href="https://www.facebook.com/PokerSportsLeague" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://twitter.com/PSL_Ind" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="head_username">
+                        
+                            <div *ngIf="!auth.isLoggedIn() && !user" class="psl_login">
+                                <a href="javascript:void(0);" (click)="toggle()"  id="btToggle" data-toggle="modal" data-target="#loginpopup"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp; Login</a>
+                                
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
     </div>
+<!-- Navbar Top header End -->
 
-
-    <!-- Mobile Menu Start -->
-    <ul class="mobile-menu">
-        <li class="nav-item active">
-            <a class="nav-link" href="#">
-HOME
-</a>
-        </li>
-        <li class="nav-item">
-            <a class="page-scrool" href="home/#about">
-ABOUT US
-</a>
-        </li>
-        <li class="nav-item">
-            <a class="page-scrool" href="home/#schedules">
-PSL CALENDER
-</a>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown">
-        TEAMS
-</a>
-
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" routerLink="/psl-teams" routerLinkActive="router-link-active" href='#top'>PSL Teams</a></li>
-                <li><a class="dropdown-item" routerLink="/player-profile" routerLinkActive="router-link-active" href='#top'>PLAYER PROFILE</a></li>
-
-            </ul>
-        </li>
-
-
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown">
-NEWS/MEDIA
-</a>
-
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" routerLink="/news" routerLinkActive="router-link-active" href='#top'>NEWS</a></li>
-                <li><a class="dropdown-item" routerLink="/videos" routerLinkActive="router-link-active" href='#top'>VIDEOS</a></li>
-                <li><a class="dropdown-item" href="home/#gallery">EVENT GALLERY</a></li>
-                <li><a class="dropdown-item" routerLink="/previous-seasons" routerLinkActive="router-link-active" href='#top'>PREVIOUS SEASONS</a></li>
-            </ul>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown">
-            HOW TO APPLY
-        </a>
-
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" routerLink="/league-structure" routerLinkActive="router-link-active" href='#top'>LEAGUE STRUCTURE</a></li>
-                <li><a class="dropdown-item" routerLink="/how-to-play" routerLinkActive="router-link-active" href='#top'>HOW TO APPLY</a></li>
-                <li><a class="dropdown-item" routerLink="/qualifier" routerLinkActive="router-link-active" href='#top'>BE A QUALIFIER</a></li>
-                <li><a class="dropdown-item" routerLink="/pro" routerLinkActive="router-link-active" href='#top'>BE A PRO</a></li>
-                <li><a class="dropdown-item" routerLink="/mentor" routerLinkActive="router-link-active" href='#top'>BE A MENTOR</a></li>
-            </ul>
-        </li>
-
-
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown">
-            MORE
-        </a>
-
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" routerLink="/league-structure" routerLinkActive="router-link-active" href='#top'>LEAGUE STRUCTURE</a></li>
-                <li><a class="dropdown-item" href="home/#sponsors">PARTNERS</a></li>
-                <li><a class="dropdown-item" href="home/#faq">FAQ's</a></li>
-                <li><a class="dropdown-item" href="home/#contact">CONTACT US</a></li>
-            </ul>
-        </li>
-
-
-        <li *ngIf="auth.isLoggedIn()" class="nav-item dropdown">
-            <span class="nav-link dropdown-toggle" [innerHTML]="message" style="text-transform:none;color:#a2bbe2;" data-toggle="dropdown"> </span>
-            <ul class="dropdown-menu">
-                <li>
-                    <a href="javascript:void(0);" (click)="auth.logout()" class="dropdown-item" style="text-transform:none">Logout &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i> </a>
-                </li>
-            </ul>
-
-        </li>
-
-        <li *ngIf="user" class="nav-item dropdown">
-            <span class="nav-link dropdown-toggle" [innerHTML]="message" style="text-transform:none;color:#a2bbe2;" data-toggle="dropdown"> </span>
-            <ul class="dropdown-menu">
-                <li>
-                    <a href="javascript:void(0);" (click)="signOut()" class="dropdown-item" style="text-transform:none">Logout  &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i> </a>
-                </li>
-            </ul>
-
-        </li>
-    </ul>
-    <!-- Mobile Menu End -->
+<!-- Navbar Bottom header Start -->
+    <div style="float: left;width: 100%;" class="navbar navbar-expand-lg  scrolling-navbar">
+        
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button class="navbar-toggler" style= "color: #fff;" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            <span class="icon-menu"></span>
+            <span class="icon-menu"></span>
+            <span class="icon-menu"></span>
+            </button>
+                <a href="index.html" class="navbar-brand"><img src="" alt=""></a>
+            </div>
+            <div class="collapse navbar-collapse" id="main-navbar">
+                <ul class="navbar-nav mr-auto w-100 justify-content-end">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                HOME
+                </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="home/#about">
+                ABOUT US
+                </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="home/#schedules">
+                PSL CALENDER
+                </a>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+                        TEAMS
+            </a>
+    
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" routerLink="/psl-teams" routerLinkActive="router-link-active" href='#top'>PSL Teams</a></li>
+                            <li><a class="dropdown-item" routerLink="/player-profile" routerLinkActive="router-link-active" href='#top'>PLAYER PROFILE</a></li>
+    
+                        </ul>
+                    </li>
+    
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+        NEWS/MEDIA
+            </a>
+    
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" routerLink="/news" routerLinkActive="router-link-active" href='#top'>NEWS</a></li>
+                            <li><a class="dropdown-item" routerLink="/videos" routerLinkActive="router-link-active" href='#top'>VIDEOS</a></li>
+                            <li><a class="dropdown-item" href="home/#gallery">EVENT GALLERY</a></li>
+                            <li><a class="dropdown-item" routerLink="/previous-seasons" routerLinkActive="router-link-active" href='#top'>PREVIOUS SEASONS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+                            HOW TO APPLY
+                        </a>
+    
+                        <ul class="dropdown-menu">
+    
+                            <li><a class="dropdown-item" routerLink="/how-to-play" routerLinkActive="router-link-active" href='#top'>HOW TO APPLY</a></li>
+                            <li><a class="dropdown-item" routerLink="/qualifier" routerLinkActive="router-link-active" href='#top'>BE A QUALIFIER</a></li>
+                            <li><a class="dropdown-item" routerLink="/pro" routerLinkActive="router-link-active" href='#top'>BE A PRO</a></li>
+                            <li><a class="dropdown-item" routerLink="/mentor" routerLinkActive="router-link-active" href='#top'>BE A MENTOR</a></li>
+                        </ul>
+                    </li>
+    
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+                            MORE
+                        </a>
+    
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" routerLink="/league-structure" routerLinkActive="router-link-active" href='#top'>LEAGUE STRUCTURE</a></li>
+                            <li><a class="dropdown-item" href="home/#sponsors">PARTNERS</a></li>
+                            <li><a class="dropdown-item" href="home/#faq">FAQ's</a></li>
+                            <li><a class="dropdown-item" href="home/#contact">CONTACT US</a></li>
+                        </ul>
+                    </li>
+    
+    
+                    <li *ngIf="auth.isLoggedIn()" class="nav-item dropdown">
+                        <span class="nav-link dropdown-toggle" [innerHTML]="message" style="text-transform:none;color:#a2bbe2;" data-toggle="dropdown"> </span>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="javascript:void(0);" (click)="auth.logout()" class="dropdown-item" style="text-transform:none">Logout &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i> </a>
+                            </li>
+                        </ul>
+    
+                    </li>
+    
+                    <li *ngIf="user" class="nav-item dropdown">
+                        <span class="nav-link dropdown-toggle" [innerHTML]="message" style="text-transform:none;color:#a2bbe2;" data-toggle="dropdown"> </span>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="javascript:void(0);" (click)="signOut()" class="dropdown-item" style="text-transform:none">Logout  &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i> </a>
+                            </li>
+                        </ul>
+    
+                    </li>
+    
+                </ul>
+            </div>
+        </div>
+    
+    
+        <!-- Mobile Menu Start -->
+        <ul class="mobile-menu">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">
+    HOME
+    </a>
+            </li>
+            <li class="nav-item">
+                <a class="page-scrool" href="home/#about">
+    ABOUT US
+    </a>
+            </li>
+            <li class="nav-item">
+                <a class="page-scrool" href="home/#schedules">
+    PSL CALENDER
+    </a>
+            </li>
+    
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+            TEAMS
+    </a>
+    
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" routerLink="/psl-teams" routerLinkActive="router-link-active" href='#top'>PSL Teams</a></li>
+                    <li><a class="dropdown-item" routerLink="/player-profile" routerLinkActive="router-link-active" href='#top'>PLAYER PROFILE</a></li>
+    
+                </ul>
+            </li>
+    
+    
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+    NEWS/MEDIA
+    </a>
+    
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" routerLink="/news" routerLinkActive="router-link-active" href='#top'>NEWS</a></li>
+                    <li><a class="dropdown-item" routerLink="/videos" routerLinkActive="router-link-active" href='#top'>VIDEOS</a></li>
+                    <li><a class="dropdown-item" href="home/#gallery">EVENT GALLERY</a></li>
+                    <li><a class="dropdown-item" routerLink="/previous-seasons" routerLinkActive="router-link-active" href='#top'>PREVIOUS SEASONS</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+                HOW TO APPLY
+            </a>
+    
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" routerLink="/league-structure" routerLinkActive="router-link-active" href='#top'>LEAGUE STRUCTURE</a></li>
+                    <li><a class="dropdown-item" routerLink="/how-to-play" routerLinkActive="router-link-active" href='#top'>HOW TO APPLY</a></li>
+                    <li><a class="dropdown-item" routerLink="/qualifier" routerLinkActive="router-link-active" href='#top'>BE A QUALIFIER</a></li>
+                    <li><a class="dropdown-item" routerLink="/pro" routerLinkActive="router-link-active" href='#top'>BE A PRO</a></li>
+                    <li><a class="dropdown-item" routerLink="/mentor" routerLinkActive="router-link-active" href='#top'>BE A MENTOR</a></li>
+                </ul>
+            </li>
+    
+    
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+                MORE
+            </a>
+    
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" routerLink="/league-structure" routerLinkActive="router-link-active" href='#top'>LEAGUE STRUCTURE</a></li>
+                    <li><a class="dropdown-item" href="home/#sponsors">PARTNERS</a></li>
+                    <li><a class="dropdown-item" href="home/#faq">FAQ's</a></li>
+                    <li><a class="dropdown-item" href="home/#contact">CONTACT US</a></li>
+                </ul>
+            </li>
+    
+    
+            <li *ngIf="auth.isLoggedIn()" class="nav-item dropdown">
+                <span class="nav-link dropdown-toggle" [innerHTML]="message" style="text-transform:none;color:#a2bbe2;" data-toggle="dropdown"> </span>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="javascript:void(0);" (click)="auth.logout()" class="dropdown-item" style="text-transform:none">Logout &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i> </a>
+                    </li>
+                </ul>
+    
+            </li>
+    
+            <li *ngIf="user" class="nav-item dropdown">
+                <span class="nav-link dropdown-toggle" [innerHTML]="message" style="text-transform:none;color:#a2bbe2;" data-toggle="dropdown"> </span>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="javascript:void(0);" (click)="signOut()" class="dropdown-item" style="text-transform:none">Logout  &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i> </a>
+                    </li>
+                </ul>
+    
+            </li>
+        </ul>
+        <!-- Mobile Menu End -->
+    
+    </div>
+ <!-- Navbar Bottom header End -->       
 
 </nav>
 <!-- Navbar End -->
+
+<!-- reg/login popup div start-->
+<div style="display:none" id="divshow2">
+        <app-login></app-login>
+</div>
+<div style="display:none" id="divreg">
+    <app-register></app-register>
+</div>
+<div style="display:none" id="divfp">
+    <app-forgot-password></app-forgot-password>
+</div>
+<!--reg/login popup div end-->
+

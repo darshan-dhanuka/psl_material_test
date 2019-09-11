@@ -41,5 +41,10 @@ export class NavigationComponent implements OnInit {
     this.data.changeMessage('');
     window.location.reload();
   }
+  
+  toggle() {
+    document.getElementById('divshow2').style.display = 'block';
+  }
+  
 
 }

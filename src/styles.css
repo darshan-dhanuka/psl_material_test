@@ -970,7 +970,7 @@ a.back-to-top:focus {
 }
 
 .counter-section .counter {
-    padding: 30px 0;
+    padding: 5px 0;
 }
 
 .counter-section .counter .icon {
@@ -2482,7 +2482,7 @@ a.back-to-top:focus {
 
 #main-slide .carousel-indicators {
     cursor: pointer;
-    bottom: 90px;
+    /*bottom: 90px;*/
 }
 
 #main-slide:hover .carousel-control {
@@ -2678,6 +2678,728 @@ a.back-to-top:focus {
     animation: fade_move_down 4s ease-in-out infinite;
 }
 
+.top-nav-header-collapse{
+    display: none;
+}
+/*static reg form*/
+
+.psl_banner_registerbg {
+	position: absolute;
+	top: 50%;
+	left: 8%;
+	-ms-transform: translate(0, -50%);
+	-o-transform: translate(0, -50%);
+	-moz-transform: translate(0, -50%);
+	-webkit-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	z-index: 9;
+	transition: all ease .1s;
+	-webkit-transition: all ease .1s;
+	-moz-transition: all ease .1s
+}
+
+.psl_banner_registernow {
+	border-radius: 30px;
+	background-color: #fff;
+	width: 430px;
+	padding: 30px;
+	position: relative;
+	z-index: 999999
+}
+
+.psl_banner_registernow form {
+	position: relative
+}
+
+.psl_banner_registernow .sendotp_btn {
+	position: absolute;
+	top: 15px;
+	right: 5px;
+	cursor: pointer;
+	font-size: 14px;
+	color: #d0021b;
+	font-family: sailecbold;
+	text-transform: uppercase;
+	z-index: 5;
+	font-weight: 400
+}
+
+.psl_banner_registernow h3 {
+	font-size: 23px;
+	color: #192428;
+	text-transform: uppercase;
+	font-family: sailecbold;
+	text-align: center;
+	margin-bottom: 30px
+}
+
+.psl_banner_registernow .form-group {
+	margin-bottom: 20px;
+	position: relative
+}
+
+.psl_banner_registernow .form-group .pwd_info {
+	position: absolute;
+	top: 12px;
+	right: 5px;
+	cursor: pointer
+}
+
+.psl_banner_registernow .checkbox {
+	margin-bottom: 10px
+}
+
+.psl_banner_registernow .checkbox label {
+	font-family: saileclight;
+	font-size: 15px;
+	color: #333;
+	display: flex
+}
+
+.psl_banner_registernow input[type=email],
+.psl_banner_registernow input[type=number],
+.psl_banner_registernow input[type=password],
+.psl_banner_registernow input[type=tel],
+.psl_banner_registernow input[type=text],
+.psl_banner_registernow textarea {
+	border: 0;
+	border-bottom: 1px solid #ccc;
+	background: 0 0;
+	padding-left: 0;
+	padding-right: 0;
+	font-size: 15px;
+	font-family: saileclight;
+	color: #333
+}
+
+.psl_banner_registernow input[type=checkbox],
+.psl_banner_registernow input[type=radio] {
+	margin-right: 7px;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 3px
+}
+
+.psl_banner_registernow .signup_btn {
+	background-color: #16253c;
+	border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	color: #fefefe;
+	font-size: 22px;
+	font-family: sailecmedium;
+	text-transform: uppercase;
+	margin: 20px auto;
+	text-align: center;
+	padding: 13px 54px;
+	border: 1px solid #16253c
+}
+.promocode-input {
+	display: none
+}
+
+.errorClass {
+	font-size: 13px;
+	float: right;
+	color: red;
+	display: none
+}
+
+.sucessClass {
+	font-size: 13px;
+	float: right;
+	color: green;
+	display: none
+}
+
+.checkIfvalidError {
+	border-bottom: 1px solid red!important
+}
+.errorClass {
+	line-height: 14px
+}
+
+.psl_banner_title {
+	width: 500px;
+	height: 100%;
+	position: absolute;
+	left: -45px;
+	z-index: 0
+}
+
+.psl_banner_title h5 {
+	transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	position: absolute;
+	left: 0;
+	transform-origin: 0 0;
+	text-align: center;
+	bottom: 15%;
+	padding-bottom: 0;
+	text-align: center;
+	padding-bottom: 0
+}
+
+.psl_banner_title h5:after {
+	width: 60px;
+	height: 1px;
+	position: absolute;
+	bottom: 23px;
+	left: -75px;
+	background: #d7a227;
+	content: "";
+	display: block
+}
+
+.psl_banner_title h5 span {
+	text-transform: uppercase;
+	position: relative;
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	font-family: sailecblack;
+	font-size: 36px;
+	color: #fff
+}
+
+.header_top {
+	-webkit-box-shadow: 0 4px 50px 0 rgba(239, 239, 240, 1), 0 4px 10px 0 rgba(239, 239, 240, 1);
+	box-shadow: 0 4px 50px 0 rgba(239, 239, 240, 1), 0 4px 10px 0 rgba(239, 239, 240, 1);
+	float: left;
+	width: 100%;
+	padding: 0;
+	background: #c2a455
+}
+
+.header_bottom {
+	float: left;
+	width: 100%;
+	background: #fff;
+	transition: all ease .2s;
+	-webkit-transition: all ease .2s;
+	-moz-transition: all ease .2s;
+	box-shadow: 5px 2px 10px 0 rgba(0, 0, 0, .2);
+	-webkit-box-shadow: 5px 2px 10px 0 rgba(0, 0, 0, .2);
+	-moz-box-shadow: 5px 2px 10px 0 rgba(0, 0, 0, .2);
+	height: 66px
+}
+
+header.fixed .header_bottom {
+	height: auto
+}
+.header_container {
+	width: 100%;
+	max-width: 1300px;
+	margin: 0 auto
+}
+.head_right {
+	float: right;
+	text-align: right;
+	padding: 5px 0;
+	transition: all ease .5s;
+	-webkit-transition: all ease .5s;
+	-moz-transition: all ease .5s
+}
+
+.psl_contact_info,
+.head_login {
+	display: inline-block;
+	vertical-align: middle
+}
+.head_right .pre_login {
+	padding-top: 5px
+}
+
+.head_right .pre_login ul {
+	padding: 0;
+	margin: 0;
+	display: table-row
+}
+
+.head_right .pre_login ul li {
+	list-style: none;
+	border: 1px solid #d7a227;
+	border-left: 0 solid #d7a227;
+	width: 33.333%;
+	margin-left: -1px;
+	display: table-cell;
+	vertical-align: middle
+}
+
+.head_right .pre_login ul li:first-child {
+	border-radius: 3px 0 0 3px;
+	border-left: 1px solid #d7a227;
+	border-right: 0
+}
+
+.head_right .pre_login ul li:first-child input[type=text] {
+	border-right: 0 solid #ccc
+}
+
+.head_right .pre_login ul li:last-child {
+	border-radius: 0 3px 3px 0;
+	text-align: center;
+	width: 22%;
+	background: #dadada
+}
+
+.head_right .pre_login ul li input[type=email],
+.head_right .pre_login ul li input[type=password],
+.head_right .pre_login ul li input[type=tel],
+.head_right .pre_login ul li input[type=text] {
+	border: 0;
+	height: 30px;
+	margin: 5px 0;
+	font-size: 11px;
+	color: #fff
+}
+
+.head_right .pre_login ul li input::-webkit-input-placeholder {
+	color: #fff
+}
+
+.head_right .pre_login ul li input::-moz-placeholder {
+	color: #fff
+}
+
+.head_right .pre_login ul li input:-ms-input-placeholder {
+	color: #fff
+}
+
+.head_right .pre_login ul li input:-moz-placeholder {
+	color: #fff
+}
+
+.head_right .pre_login ul li button.login_btn {
+	background: 0 0;
+	text-align: center;
+	box-shadow: none;
+	color: #d7a227;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-family: sailecmedium
+}
+.headsocial_list ul {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	text-align: center
+}
+
+.headsocial_list ul li {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 6px
+}
+
+.headsocial_list ul li a {
+	border: 0;
+	text-align: center;
+	display: block;
+	color: #fff;
+	font-size: 18px
+}
+
+.headsocial_list ul li i {
+	margin: 0
+}
+
+.headsocial_list ul li a:hover i.fa-facebook {
+	color: #3b5998
+}
+
+.headsocial_list ul li a:hover i.fa-instagram {
+	color: #b12d73
+}
+
+.headsocial_list ul li a:hover i.fa-twitter {
+	color: #00acee
+}
+
+.headsocial_list ul li a:hover i.fa-youtube {
+	color: #c4302b
+}
+
+.psl_contact_info i.fa {
+	
+    font-size: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+    margin-bottom: 3px;
+}
+.psl_login a,
+.psl_login a:hover {
+	color: #fff;
+	font-size: 15px
+}
+
+.psl_contact_info {
+	padding: 0 10px 0 0
+}
+
+.headsocial_list {
+	padding: 0 10px;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle
+}
+
+.headsocial_list:before {
+	width: 1px;
+	height: 16px;
+	position: absolute;
+	top: 4px;
+	left: 0;
+	content: "";
+	display: block;
+	background: #fff
+}
+
+.psl_contact_info a,
+.psl_contact_info a:hover {
+	font-family: saileclight;
+	font-size: 15px;
+	color: #fff
+}
+
+.psl_contact_info em {
+	font-style: normal
+}
+
+.head_username {
+	font-size: 15px;
+	color: #182126;
+	font-family: saileclight;
+	padding-left: 10px;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle
+}
+
+.head_username:before {
+	width: 1px;
+	height: 16px;
+	position: absolute;
+	top: 4px;
+	left: 0;
+	content: "";
+	display: block;
+	background: #fff
+}
+
+.headsocial_list ul {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	text-align: center
+}
+
+.headsocial_list ul li {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 6px
+}
+
+.headsocial_list ul li a {
+	border: 0;
+	text-align: center;
+	display: block;
+	color: #fff;
+	font-size: 18px
+}
+
+.headsocial_list ul li i {
+	margin: 0
+}
+
+.headsocial_list ul li a:hover i.fa-facebook {
+	color: #3b5998
+}
+
+.headsocial_list ul li a:hover i.fa-instagram {
+	color: #b12d73
+}
+
+.headsocial_list ul li a:hover i.fa-twitter {
+	color: #00acee
+}
+
+.headsocial_list ul li a:hover i.fa-youtube {
+	color: #c4302b
+}
+@media (max-width:1500px) {
+    .psl_banner_registernow {
+		padding: 20px
+	}
+	.psl_banner_registernow h3 {
+		font-size: 22px;
+		margin-bottom: 15px
+	}
+	.psl_banner_title {
+		top: 0;
+		left: -40px;
+		width: 430px
+	}
+	.psl_banner_title h5 span {
+		font-size: 32px
+	}
+	.psl_banner_title h5:after {
+		bottom: 21px;
+		left: -65px;
+		width: 50px
+	}
+	.psl_banner_registernow .signup_btn {
+		font-size: 20px;
+		margin: 10px auto;
+		padding: 10px 54px
+	}
+	.psl_banner_registernow {
+		border-radius: 20px;
+		width: 380px
+	}
+	.psl_banner_registernow .form-group {
+		margin-bottom: 25px
+	}
+}
+@media (max-width:1300px) {
+    .psl_banner_registerbg {
+		left: 60px
+	}
+	.psl_banner_registernow {
+		width: 350px
+    }
+    .psl_banner_title h5 span {
+		font-size: 28px
+	}
+	.psl_banner_title h5:after {
+		bottom: 18px;
+		left: -55px
+	}
+}
+
+@media (max-width:1100px) {
+    .psl_banner_registernow {
+		width: 300px;
+		padding: 15px
+	}
+	.psl_banner_title {
+		left: -40px
+	}
+	.psl_banner_registerbg {
+		left: 50px
+	}
+	.psl_banner_registernow .checkbox label {
+		font-size: 12px;
+		line-height: 18px
+	}
+	.psl_banner_registernow .signup_btn {
+		font-size: 18px;
+		margin: 10px auto 0 auto;
+		padding: 8px 50px
+    }
+    
+    .psl_banner_registernow h3 {
+		font-size: 18px;
+		margin-bottom: 5px
+	}
+	.psl_ourblog_sec {
+		min-height: 400px
+	}
+	.psl_popularpokeroffers_sec {
+		padding: 15px;
+		height: 346px
+	}
+	.psl_banner_registernow .form-group {
+		margin-bottom: 15px
+	}
+}
+
+@media (max-width:980px) {
+    .psl_banner_registerbg {
+		left: inherit;
+		position: relative;
+		top: inherit;
+		margin: 0 auto;
+		right: inherit;
+		transform: inherit;
+		background: #eee;
+		padding: 25px 0
+	}
+	.psl_banner_registernow {
+		width: 95%;
+		margin: 0 auto;
+		padding: 20px
+	}
+	.psl_safesecure_icon {
+		max-width: 30%;
+		margin: 0 auto 20px auto
+	}
+	.psl_banner_registernow .form-group {
+		width: 48%;
+		margin-left: 5px;
+		margin-right: 5px;
+		display: inline-block;
+		vertical-align: top;
+		text-align: left!important
+	}
+
+    .psl_banner_registernow h3 {
+		font-size: 24px
+    }
+    .psl_banner_registernow .checkbox label {
+		font-size: 15px;
+		line-height: inherit
+    }
+    
+    .psl_banner_title {
+		left: inherit;
+		top: inherit;
+		position: inherit;
+		width: 100%
+	}
+	.psl_banner_title h5 {
+		transform: inherit;
+		left: inherit;
+		top: inherit;
+		position: inherit;
+		bottom: inherit;
+		text-align: center;
+		margin-bottom: 15px
+	}
+	.psl_banner_title h5 span {
+		color: #000;
+		font-size: 28px
+	}
+	.psl_banner_title h5:after {
+		display: none
+	}
+    
+}
+@media (max-width:767px) {
+    .psl_banner_registernow .form-group {
+		width: 47.5%
+    }
+    .psl_banner_registernow .signup_btn {
+		font-size: 16px;
+		padding: 10px 25px
+    }
+    .psl_banner_title h5 span {
+		font-size: 24px
+	}
+}
+
+@media (max-width:600px) {
+    .errorClass {
+		font-size: 12px;
+		line-height: 13px
+    }
+    
+    .psl_login a,
+	.psl_login a:hover {
+		font-size: 14px
+	}
+}
+
+@media (max-width:500px) {
+    .psl_banner_registerbg {
+        width: 100%;
+        position: inherit
+    }
+    .psl_banner_title h5 span {
+        font-size: 22px
+    }
+    .psl_banner_registernow h3 {
+        font-size: 20px
+    }
+
+    .psl_banner_registernow .form-group {
+		width: 100%
+	}
+	.psl_banner_registernow h3 {
+		font-size: 22px
+	}
+	.psl_banner_registernow .checkbox label {
+		font-size: 14px;
+		line-height: 18px
+    }
+    .psl_banner_registernow .form-group {
+		margin-left: 0;
+		margin-right: 0
+    }
+    .psl_banner_registernow h3 {
+		margin-top: 5px
+	}
+}
+@media (max-width:450px) {
+    .psl_banner_registernow h3 {
+        font-size: 18px
+    }
+
+    .psl_banner_title h5 span {
+		font-size: 18px
+	}
+	
+}
+@media (max-width:418px) {
+    .psl_banner_registernow {
+        padding: 10px
+    }
+    .psl_banner_registerbg {
+        padding: 15px 0 25px 0
+    }
+    .getyourfreetrial_info {
+        max-width: 100%;
+        text-align: center!important
+    }
+    .text-left.getyourfreetrial_list {
+        text-align: center!important
+    }
+    .psl_banner_registernow .signup_btn {
+        padding: 8px 25px 6px 25px
+    }
+    .psl_banner_registernow .form-group.text-center {
+        text-align: center!important
+    }
+    .header_top {
+		box-shadow: none
+	}
+
+}
+
+@media (min-width:1350px) and (max-width:1366px) {
+    .psl_banner_registernow {
+        padding: 15px 20px
+    }
+    .psl_banner_registernow h3 {
+        font-size: 20px;
+        margin-bottom: 5px
+    }
+    .psl_banner_registernow .checkbox label {
+        font-size: 13px;
+        line-height: 16px
+    }
+    .psl_banner_registernow .signup_btn {
+        margin: 5px auto 0;
+        font-size: 15px;
+        padding: 5px 50px
+    }
+    .psl_banner_title h5 span {
+        font-size: 25px
+    }
+    .psl_banner_registernow {
+        border-radius: 20px;
+        width: 334px;
+        padding: 20px
+    }
+}
+/*static reg form*/
 
 /*animated scroll arrow animation*/
 
