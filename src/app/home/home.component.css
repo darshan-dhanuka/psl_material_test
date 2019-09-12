@@ -6,5 +6,7 @@
     #reg {
         top: 110px;
     }
-    
+    #pranav_b_abt, #a_g_abt{
+		display:none;
+	}
 } 
