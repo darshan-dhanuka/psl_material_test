@@ -71,57 +71,97 @@
         <!--div class="psl_banner_title">
             <h5><span>Register Now</span></h5>
         </div-->
-        <div class="psl_banner_registernow" id="reg_model">
-            <h3>Register for Free</h3>
-            <div id="errormessegehere"></div>
-            <form autocomplete="off" id="registernow_form">
-                <input type="hidden" name="_csrf" value="1UP3zIXE-YQYzozJmIPxx-5HobKUoeKBzfJg"> 
-                <div class="form-group error_form_group" id="userName_label">
-                     <input type="text" class="form-control checkIfvalid checkIfvalidError" placeholder="Username" attr-span="#userName_span" attr-label="#userName_label" attr-type="PLAYER_NICKNAME_FREE" name="username" required="" autocomplete="off">
-                     <span class="errorClass" id="userName_span" style="display: inline;">Username Empty</span>
+        <div class="psl_banner_registernow" id="reg_modal">
+            <h3>Register for Free!!!</h3>
+            <div id="scrollId" style="color: #dc3545;" [innerHTML]="htmlStr">
+            </div>
+            <!--FORM STEP 1-->
+            <form name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
+                 
+                <div class="form-group error_form_group" >
+                     <input type="text" class="form-control checkIfvalid" placeholder="Username" attr-span="#userName_span" attr-label="#userName_label"  name="uname" id="uname" [(ngModel)]="credentials.uname" #uname="ngModel" [ngClass]="{ 'is-invalid': f.submitted && uname.invalid }" required autocomplete="off">
+                     <div *ngIf="f.submitted && uname.invalid">
+                            <span *ngIf="uname.errors.required" class="errorClass" id="userName_span" style="display: inline;">Username is required</span>
+                     </div>
                 </div>
+
+                <div class="form-group error_form_group" >
+                        <input type="email" class="form-control checkIfvalid" placeholder="Email" attr-label="#email_label" attr-span="#email_span" name="email"  [(ngModel)]="credentials.email" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email>
+                        <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+                                <span *ngIf="email.errors.required" class="errorClass" id="email_span">Email is required</span>
+                                <span *ngIf="email.errors.email" class="errorClass" id="email_span">Invalid Email</span>
+                        </div>
+                </div>
+
                 <div class="form-group" id="password_label">
-                    <input class="form-control checkIfvalid" type="password" placeholder="Password" attr-label="#password_label" attr-span="#password_span" attr-type="PLAYER_PASSWORD" name="password" required="" autocomplete="off">
-                    <i class="fa fa-info pwd_info" data-placement="bottom" data-toggle="tooltip" title="Password must contain uppercase letter lowercase letter and a number and length of atlest 5"></i>
-                    <span class="errorClass" id="password_span">Invalid Password</span>
+                    <input class="form-control checkIfvalid" type="password" placeholder="Password" attr-label="#password_label" attr-span="#password_span" name="password" [(ngModel)]="credentials.password" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" required minlength="6" autocomplete="off">
+                    <i class="fa fa-info pwd_info" data-placement="bottom" data-toggle="tooltip" title="Password must contain length of atlest 6"></i>
+
+                    <div *ngIf="f.submitted && password.invalid" class="invalid-val">
+                        <span *ngIf="password.errors.required" class="errorClass" id="password_span">Password is required</span>
+                        <span *ngIf="password.errors.minlength" class="errorClass" id="password_span">Invalid Password</span>
+                    </div>
                 </div>
-                <div class="form-group" id="email_label">
-                    <input type="email" class="form-control checkIfvalid" placeholder="Email" attr-label="#email_label" attr-span="#email_span" attr-type="PLAYER_EMAIL_FREE" name="email" required="">
-                    <span class="errorClass" id="email_span">Invalid Email</span>
-                </div>
+                
                 <div class="checkbox">
-                    <label><input type="checkbox" name="confirm_terms" id="checkbox_confirm"><span>I Confirm that I have read and accepted all the Rules and Conditions.</span></label>
-                    <span class="errorClass" id="confirm_check_span">Please Confirm Terms</span>
+                    <label><input type="checkbox" name="terms" [ngModel]="credentials.terms" required #terms="ngModel"><span>I agree to the <a href="javascript:void(0);" (click)="showterms()" id="btToggle">Terms of Use </a>&amp; I am above 18 years. </span></label>
+
+                    <div *ngIf="f.submitted && terms.invalid" class="invalid-val"> 
+                        <span *ngIf="terms.errors.required" class="errorClass" id="confirm_check_span">Please Confirm Terms</span>
+                    </div> 
                 </div>
+
                 <div class="form-group mb-0 text-center">
-                    <button type="submit" class="btn signup_btn" id="registernow_btn" disabled="">NEXT</button>
+                    <button type="submit" class="btn signup_btn">NEXT</button>
                 </div>
             </form>
         </div>
+
         <div style="display:none;" class="psl_banner_registernow" id="otp_modal">
             <h3>You are one step away to getting started!</h3>
-            <form autocomplete="off" id="registernow3_form">
+            <!--FORM STEP 2-->
+            <div style="color: #dc3545;display:none" [innerHTML]="sendoptStr" id="otp_sent_error">
+            </div>
+            <form name="form2" (ngSubmit)="f2.form.valid && register_next(f2)" #f2="ngForm" novalidate>
+                
+
+                <div class="form-group" id="fullname_label">
+                    <input type="text" class="form-control checkIfvalid" name="name" placeholder="Full name" attr-label="#fullname_label" attr-span="#fullname_span"  [(ngModel)]="credentials.name" #name="ngModel" [ngClass]="{ 'is-invalid': f2.submitted && name.invalid }" required>
+    
+                    <div *ngIf="f2.submitted && name.invalid" class="invalid-val">
+                        <span *ngIf="name.errors.required" class="errorClass" id="fullname_span">Full Name Empty</span>    
+                    </div>
+                </div>
+
                 <div class="form-group" id="phone_label">
-                    <input type="text" class="form-control checkIfvalid" placeholder="Phone number" attr-label="#phone_label" attr-span="#phone_span" attr-type="PLAYER_PHONE" name="number" id="myPhoneNumber" required="">
-                    <div class="sendotp_btn" id="sendotp_btn">Send OTP</div>
-                    <span class="errorClass" id="phone_span">Invalid Phone</span>
+                    <input type="text" class="form-control checkIfvalid" placeholder="Phone number" attr-label="#phone_label" attr-span="#phone_span" name="phone" [(ngModel)]="credentials.phone"  #phone="ngModel" [ngClass]="{ 'is-invalid': f2.submitted && phone.invalid }" required minlength="10" maxlength="10" phone (keypress)="keyPress($event)">
+                    <div class="sendotp_btn" id="sendotp_btn" (click)="sendotp_func(phone)">Send OTP</div>
+                    <span style="display:none" class="sucessClass" id="otp_sent_span" [innerHTML]="sendoptStr"></span>
+                    <div *ngIf="f2.submitted && phone.invalid" class="invalid-val">
+                        <span *ngIf="phone.errors.required" class="errorClass" id="phone_span">Phone Empty</span>
+                        <span *ngIf="phone.errors.minlength" class="errorClass" id="phone_span">Invalid Phone</span>
+                        <span *ngIf="phone.errors.maxlength" class="errorClass" id="phone_span">Invalid Phone</span>
+                    </div>
+
                 </div>
+
                 <div class="form-group" id="otp_label">
-                    <input type="text" class="form-control" placeholder="OTP" attr-label="#otp_label" attr-span="#otp_span" attr-type="PLAYER_OTP" autocomplete="off" id="myOtp" name="otp">
-                     <span class="errorClass" id="otp_span">Otp Empty</span>
-                    <span class="sucessClass" id="phone_span_s"></span>
+                    <input type="text" class="form-control" placeholder="Enter OTP" attr-label="#otp_label" attr-span="#otp_span" autocomplete="off" name="otp_text" id="otp_text" ngModel  #otp_text="ngModel" [ngClass]="{ 'is-invalid': f2.submitted && otp_text.invalid }" required (keypress)="keyPress($event)">
+                    <span style="display:none" class="errorClass" id="otp_valid_span" [innerHTML]="validotpStr"></span>
+                    <div *ngIf="f2.submitted && otp_text.invalid" class="invalid-val">
+                        <span *ngIf="otp_text.errors.required" class="errorClass" id="otp_span">Otp Empty</span> 
+                    </div>
+
                 </div>
-                <div class="form-group" id="promo_label">
-                    <input type="text" class="form-control removeErrorClass" attr-label="#promo_label" attr-span="#promo_span" placeholder="Have a promo code?" name="promocode">
-                    <span class="errorClass" id="promo_span">Invalid promocode</span>
+                
+                <div class="form-group" id="referral_div">
+                    <input type="text" class="form-control checkIfvalid" placeholder="Have a referral code?" attr-label="#referral_div" attr-span="#refral_span"  name="referral_code" [(ngModel)]="credentials.referral_code" #referral_code="ngModel">
                 </div>
-                <div class="form-group" id="promocode-input-refral">
-                    <input type="text" class="form-control checkIfvalid" placeholder="Have a referral code?" attr-label="#promocode-input-refral" attr-span="#refral_span" attr-type="PLAYER_LOGIN_FREE_NOT" name="referredBy">
-                    <span class="errorClass" id="refral_span">Invalid Refral</span>
-                </div>
+
                 <div class="form-group mb-0 text-center">
-                    <button type="submit" class="btn signup_btn" id="registernow_btn_otp" disabled="">Signup</button>
+                    <button type="submit" class="btn signup_btn">Register Now</button>
                 </div>
+
             </form>
         </div>
     </div>
@@ -205,6 +245,9 @@
 <div style="display:none" id="divfp">
     <app-forgot-password></app-forgot-password>
 </div>
+<div *ngIf="show_terms" id="terms_div">
+        <app-terms></app-terms>
+</div>
 <!--reg/login popup div end-->
 
 <!-- Main Carousel Section End -->
@@ -220,7 +263,7 @@
 <!---floating icon-->
 <div id="mySidenav" class="sidenav">
     <div class="">
-        <a href="javascript:void(0);" class="nav-reg-btn levitate" style="padding: 8px 6px; font-size: 15px; color: #061d40" (click)="togglereg()" id="reg"><strong>REGISTER</strong></a>
+        <a href="javascript:void(0);" class="nav-reg-btn levitate" style="padding: 8px 6px; font-size: 15px; color: #061d40" (click)="regstatic()" id="reg"><strong>REGISTER</strong></a>
     </div>
 </div>
 <div style="display:none" id="divreg" class="toggle-form">
@@ -723,7 +766,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="site-info">
-                    <p>� Poker Sports League</p>
+                    <p>© Poker Sports League</p>
                 </div>
             </div>
         </div>

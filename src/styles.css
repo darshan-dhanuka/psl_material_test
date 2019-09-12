@@ -2043,7 +2043,7 @@ a.back-to-top:focus {
     font-size: 14px;
     box-shadow: none;
     color: #848484;
-    text-transform: capitalize;
+   /* text-transform: capitalize;*/
     background: #f7f7f7;
     border: 1px solid transparent;
     padding: 7px 19px;
@@ -2081,7 +2081,7 @@ a.back-to-top:focus {
     font-size: 14px;
     box-shadow: none;
     color: #848484;
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
     background: #f7f7f7;
     padding: 7px 19px;
     border: 1px solid #e5e5e5;
@@ -2731,7 +2731,7 @@ a.back-to-top:focus {
 
 .psl_banner_registernow h3 {
 	font-size: 23px;
-	color: #192428;
+	color: #c2a455;
 	text-transform: uppercase;
 	font-family: sailecbold;
 	text-align: center;
@@ -2809,7 +2809,7 @@ a.back-to-top:focus {
 	font-size: 13px;
 	float: right;
 	color: red;
-	display: none
+	/*display: none*/
 }
 
 .sucessClass {

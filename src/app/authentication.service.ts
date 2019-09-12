@@ -173,6 +173,18 @@ export class AuthenticationService {
         headers: {'Content-Type': 'application/json'}
       });
 }
+
+public sendotp(f): Observable<any> {
+  return this.http.post(`http://localhost/register/public/api/send_otp`, f, {
+    headers: {'Content-Type': 'application/json'}
+  });
+}
+public up_register(f): Observable<any> {
+  return this.http.post(`http://localhost/register/public/api/psl_register`, f, {
+    headers: {'Content-Type': 'application/json'}
+  });
+}
+
 private handleError(error: HttpErrorResponse) {
   if (error.error instanceof ErrorEvent) {
     // A client-side or network error occurred. Handle it accordingly.
