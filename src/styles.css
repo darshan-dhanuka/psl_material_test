@@ -2511,6 +2511,14 @@ a.back-to-top:focus {
     height: 500px;
 }
 
+
+  
+    @media only screen and (max-width: 700px) {
+        .team-banner {
+            height: auto;
+        }
+    }
+	
 #main-slide .carousel-item img {
     position: relative;
     width: 100%;
