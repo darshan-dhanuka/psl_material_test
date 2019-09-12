@@ -35,6 +35,7 @@ import { PreviousSeasonsComponent } from './previous-seasons/previous-seasons.co
 import { NewsComponent } from './news/news.component';
 import { LegalityComponent } from './legality/legality.component';
 import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
+import { PrintNewsComponent } from './print-news/print-news.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -73,6 +74,7 @@ const routes: Routes = [
   {path: 'season2', component:  Season2Component},
   {path: 'previous-seasons', component:  PreviousSeasonsComponent},
   {path: 'terms', component:  TermsAndConditionsComponent},
+  {path: 'print-media', component:  PrintNewsComponent},
   {path: 'player-profile', component:  PlayerProfileComponent}
 
 

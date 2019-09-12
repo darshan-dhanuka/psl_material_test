@@ -58,6 +58,7 @@ import { PopupBannerComponent } from './popup-banner/popup-banner.component';
 import { HowToPlayComponent } from './how-to-play/how-to-play.component';
 import { LegalityComponent } from './legality/legality.component';
 import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
+import { PrintNewsComponent } from './print-news/print-news.component';
 
 const config = new AuthServiceConfig([
   {
@@ -121,6 +122,7 @@ export function provideConfig() {
 	HowToPlayComponent,
 	LegalityComponent,
 	TermsAndConditionsComponent,
+	PrintNewsComponent,
 
   ],
   imports: [
