@@ -2176,6 +2176,12 @@ a.back-to-top:focus {
 .footer-area .footer-social li .google-plus:hover {
     background: #d34836;
 }
+.footer-area .footer-social li .youtube:hover {
+    background: #d34836;
+}
+.footer-area .footer-social li .instagram:hover {
+    background: #e91e63;
+}
 
 .footer-area .footer-text p {
     font-size: 14px;
@@ -3837,6 +3843,11 @@ header.fixed .header_bottom {
     color: white;
   }
   
+  .instagram {
+    background: #e91e63;
+    color: white;
+  }
+
   .twitter {
     background: #55ACEE;
     color: white;
