@@ -3907,3 +3907,21 @@ header.fixed .header_bottom {
   float: right;
 }
 
+@media only screen and (max-width: 700px) {
+#mySidenav a {
+    position: fixed;
+    right: 11px;
+    transition: .3s;
+    text-decoration: none;
+    border-radius: 15px;
+    padding: 8px 6px;
+    font-size: 15px;
+    color: #061d40;
+}
+#reg{
+	z-index: 500;
+}
+.mob_hide{
+	display:none;
+}
+}
