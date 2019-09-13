@@ -261,7 +261,7 @@
 <!--Popup banner div end-->
 						
 <!---floating icon-->
-<div id="mySidenav" class="sidenav">
+<div *ngIf="!auth.isLoggedIn() && !user" id="mySidenav" class="sidenav">
     <div class="">
         <a href="javascript:void(0);" class="nav-reg-btn levitate" (click)="regstatic()" id="reg"><strong>REGISTER <br><span class="mob_hide">NOW</span></strong></a>
     </div>

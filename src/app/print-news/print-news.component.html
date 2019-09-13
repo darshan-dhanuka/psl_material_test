@@ -10,7 +10,7 @@
                     <div class="carousel-caption d-md-block">
     
                         <h1 class="wow fadeInDown heading" data-wow-delay=".4s">Print Media News</h1>
-                        <div id="mySidenav" class="sidenav">
+                        <div *ngIf="!auth.isLoggedIn() && !user" id="mySidenav" class="sidenav">
                             <div class="">
                                 <a href="#" class="nav-reg-btn levitate"  id="reg"><strong>REGISTER <br><span class="mob_hide">NOW</span></strong></a>
                             </div>
@@ -30,7 +30,7 @@
         <app-login></app-login>
     </div>
     
-    <section id="gallery" class="section-padding" >
+    <section id="gallery_print_news" class="section-padding" >
             <div class="container">
                
                 <div class="row">

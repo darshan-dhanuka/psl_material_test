@@ -10,7 +10,7 @@
                 <div class="carousel-caption d-md-block">
                 
                     <h1 class="wow fadeInDown heading" data-wow-delay=".4s">HOW TO APPLY</h1>
-                    <div id="mySidenav" class="sidenav">
+                    <div *ngIf="!auth.isLoggedIn() && !user" id="mySidenav" class="sidenav">
                         <div class="">
                             <a href="#" class="nav-reg-btn levitate"  id="reg"><strong>REGISTER <br><span class="mob_hide">NOW</span></strong></a>
                         </div>
