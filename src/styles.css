@@ -1745,15 +1745,16 @@ a.back-to-top:focus {
     right: 11px;
    
     transition: 0.3s;
-    padding: 15px;
+    padding: 30px 10px;
     text-decoration: none;
     font-size: 20px;
-    color: #fff;
-    border-radius: 15px;
+    color:#16253c;
+    border-radius: 50%;
 }
 
 .levitate {
     animation: levitate 3s ease-out infinite normal;
+   
 }
 
 @keyframes levitate {
@@ -3826,7 +3827,7 @@ header.fixed .header_bottom {
 
 .icon-bar {
     position: fixed;
-    top: 60%;
+    top: 70%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
