@@ -1832,8 +1832,13 @@ a.back-to-top:focus {
     padding: 0 10px;
     background: #f7f7f7;
     position: relative;
-    top: -11px;
+    top: -14px;
     z-index: 1;
+    color: #94969F;
+    font-size: 13px;
+    font-family: 'Whitney' !important;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
 }
 
 .social-btn .btn {
@@ -1861,18 +1866,18 @@ a.back-to-top:focus {
 /*--//login--*/
 
 .style-login {
-    border-radius: 11px;
-    /* background: url(/assets/images/banner6.png) no-repeat 0px 0px; */
-    padding: 46px;
+    border-radius: 20px;
+    /* background: url(/assets/images/banner6.png) no-repeat 0px 0px;
+     padding: 46px; */
     background-size: cover;
-    background: #f1f1f1;
-    padding: 30px;
-    /*overflow-y: auto;*/
-    height: 606px;
+    background: #fff;
+    /*padding: 30px;
+     overflow-y: auto;
+     height: 606px;*/
     margin-left: auto!important;
     margin-top: 2rem!important;
     margin-right: auto!important;
-    width: 60%;
+    max-width: 470px;
 }
 
 .style-login h1 {

@@ -9,59 +9,75 @@ z-index: 99999999;
 width:100% !important">
     <div class="row">
         <div class="col-md-6 mt-5 mx-auto style-login">
-            <div class="popup-header">
-                <div class="close-popup"><a href="javascript: void(0)"><i class="fa fa-window-close login-close" aria-hidden="true" (click)="toggle()"></i></a></div>
-            </div>
-            <h2 class="text-center">Sign in</h2>
-            <form name="form" (ngSubmit)="f.form.valid && login()"  #f="ngForm" novalidate style="margin: 40px;">
-                
-                <div class="form-group">
-                    <label for="email" class="loginlabel">Email address</label>
-                    <input type="email" class="form-control" name="email" placeholder="Enter email" [(ngModel)]="credentials.email" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email>
-                    <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
-                        <div *ngIf="email.errors.required">Email is required</div>
-                        <div *ngIf="email.errors.email">Email must be a valid email address</div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="password" class="loginlabel">Password</label>
-                    <input type="password" class="form-control" name="password" placeholder="Password" [(ngModel)]="credentials.password" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" required >
-                    <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
-                        <div *ngIf="password.errors.required">Password is required</div>
-                    </div>
-                </div>
-                <div ><button type="submit" class="btn btn-success btn-block login-btn">Sign in</button></div>
-                <a href="javascript:void(0);" *ngIf="!auth.isLoggedIn()" style="float:left" class="nav-link" (click)="togglefp()">Forgot password</a>
-                <a href="javascript:void(0);" *ngIf="!auth.isLoggedIn()" style="float:right" class="nav-link" (click)="togglereg()">Not a User? Register Now</a>
+            <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal"><img src="assets/img/close_icon.png" (click)="toggle()"></button>
+                    <!--div class="popup-header">
+                        <div class="close-popup"><a href="javascript: void(0)"><i class="fa fa-window-close login-close" aria-hidden="true" (click)="toggle()"></i></a></div>
+                    </div-->
+                    <h3>Login</h3> 
+                    <form name="form" (ngSubmit)="f.form.valid && login()"  #f="ngForm" novalidate >
+                        
+                        <div class="form-group">
+                            <!--label for="email" class="loginlabel">Email address</label-->
+                            <input type="email" class="form-control" name="email" placeholder="Enter email" [(ngModel)]="credentials.email" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email>
+                            <div *ngIf="f.submitted && email.invalid" class="invalid-val">
+                                <span *ngIf="email.errors.required"  class="errorClass">Email is required</span>
+                                <span *ngIf="email.errors.email"  class="errorClass">Email must be a valid email address</span>
+                            </div>
+                        </div>
 
-            </form>
-            
+                        <div class="form-group">
+                            <!--label for="password" class="loginlabel">Password</label-->
+                            <input type="password" class="form-control" name="password" placeholder="Password" [(ngModel)]="credentials.password" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" required >
+                            <div *ngIf="f.submitted && password.invalid" class="invalid-val">
+                                <span *ngIf="password.errors.required" class="errorClass" >Password is required</span>
+                            </div> 
+                        </div>
+
+                        <div class="form-group forgotpwd_txt">
+                            <a href="javascript:void(0);" *ngIf="!auth.isLoggedIn()"  (click)="togglefp()">Forgot password?</a>
+                            <a href="javascript:void(0);" *ngIf="!auth.isLoggedIn()" class="login_reg"  (click)="togglereg()">Not a User? Register Now!</a>
+                        </div>
+
+                        <div class="form-group mb-0 text-center">
+                                <button type="submit" class="btn login_btn">Login</button>
+                        </div>
+
+                        <!--div class="form-group mb-0 text-center loginpopup_txt">
+                                <h4>Don’t have an account? <a href="javascript:void(0);" *ngIf="!auth.isLoggedIn()" (click)="togglereg()" >Register Here</a></h4>
+                        </div>
+                        <a href="javascript:void(0);" *ngIf="!auth.isLoggedIn()" style="float:right" class="nav-link" (click)="togglereg()">Not a User? Register Now</a-->
+        
+                    </form>
+                        
+                            
+                    <div class="text-center social-btn">
+                        <div class="or-seperator"><i>OR EASILY USING</i></div>
+                        <div class="login-button-container">
+                            <button class="login-facebook login-button" (click)="signInWithFB()">
+                                <span class="login-fb-logo"><i class="fa fa-facebook-square fa-2x"></i></span>
+                                <span class="login-fb-text" >FACEBOOK</span>
+                            </button>
+                            <button class="login-google login-button" (click)="signInWithGoogle()">
+                                <span class="login-gplus-logo"><i class="fa fa-google fa-2x"></i></span>
+                                <span class="login-google-text">GOOGLE</span>
+                            </button>
+                        </div>
+
+
+                        <!--div class="row">
+                            <div  class="col-lg-6 col-md-6 col-xs-12 col-sm-12 " style="padding-right: 44px;padding-left: 44px;">
+                                <a style=" text-transform: none; width: 230px; "href="javascript:void(0);" (click)="signInWithFB()" class="btn btn-primary btn-block"><i class="fa fa-facebook"></i><span style="font-size: 17px;"> Sign in with <b>Facebook</b></span> </a>
+                            </div>
+                            <div  class="col-lg-6 col-md-6 col-xs-12 col-sm-12 " style="padding-right: 44px;
+                            padding-left: 44px;">
+                                <a style=" text-transform: none; width: 230px;" href="javascript:void(0);" (click)="signInWithGoogle()" class="btn btn-danger btn-block"><i class="fa fa-google"></i><span style="font-size: 17px;"> Sign in with <b>Google</b></span></a>
+                            </div>
+                        </div-->  
+                    </div>
+            </div>
             	
-            <div class="text-center social-btn" style="margin: 40px;">
-                <div class="or-seperator"><i>or</i></div>
-                <div class="row">
-                    <div  class="col-lg-6 col-md-6 col-xs-12 col-sm-12 " style="padding-right: 44px;padding-left: 44px;">
-                        <a style=" text-transform: none; width: 230px; "href="javascript:void(0);" (click)="signInWithFB()" class="btn btn-primary btn-block"><i class="fa fa-facebook"></i><span style="font-size: 17px;"> Sign in with <b>Facebook</b></span> </a>
-                    </div>
-                    <div  class="col-lg-6 col-md-6 col-xs-12 col-sm-12 " style="padding-right: 44px;
-                    padding-left: 44px;">
-                        <a style=" text-transform: none; width: 230px;" href="javascript:void(0);" (click)="signInWithGoogle()" class="btn btn-danger btn-block"><i class="fa fa-google"></i><span style="font-size: 17px;"> Sign in with <b>Google</b></span></a>
-                    </div>
-                </div>
-                
-                
-                
-            </div>	
-            <!--div class=" bg-transparent text-center">
-                <div *ngIf="user" class="card text-center">
-                        <button class="btn btn-danger" (click)="signOut()">Sign out</button>
-                    <img style="width:20%"class="card-img-top img-responsive photo" src="{{ user.photoUrl }}">
-                    <div >
-                        <h4 class="card-title">{{ user.name }}</h4>
-                        <p class="card-text">{{ user.email }}</p>
-                    </div>
-                </div>
-            </div-->
+        
         </div>
 
     </div>

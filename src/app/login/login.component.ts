@@ -139,8 +139,9 @@ export class LoginComponent implements OnInit {
   }
 
   togglereg() {
-    document.getElementById('divshow2').style.display = 'none';
-    document.getElementById('divreg').style.display = 'block';
+    window.location.reload();
+    /*document.getElementById('divshow2').style.display = 'none';
+    document.getElementById('divreg').style.display = 'block';*/
     
   }
   togglefp() {
