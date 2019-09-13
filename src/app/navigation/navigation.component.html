@@ -27,9 +27,9 @@ right: 0; ">
                             
                         </ul>
                     </div>
-                    <div class="head_username">
+                    <div *ngIf="!auth.isLoggedIn() && !user" class="head_username">
                         
-                            <div *ngIf="!auth.isLoggedIn() && !user" class="psl_login">
+                            <div  class="psl_login">
                                 <a href="javascript:void(0);" (click)="toggle()"  id="btToggle" data-toggle="modal" data-target="#loginpopup"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp; Login</a>
                                 
                             </div>

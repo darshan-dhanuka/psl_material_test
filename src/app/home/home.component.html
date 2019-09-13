@@ -67,7 +67,7 @@
     <a href="https://www.youtube.com/channel/UCDJYOEciWDkzicSQ-RkJTCA" class="youtube" target="_blank"><i class="fa fa-youtube" ></i></a> 
   </div>
 <!--Static register form Start-->
-<div class="psl_banner_registerbg">
+<div *ngIf="!auth.isLoggedIn() && !user" class="psl_banner_registerbg">
         <!--div class="psl_banner_title">
             <h5><span>Register Now</span></h5>
         </div-->
