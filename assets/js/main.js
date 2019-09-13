@@ -1,12 +1,12 @@
 (function($) {
   
   "use strict";  
-
+	setTimeout(function(){ $('#preloader').fadeOut(); }, 2000);
   $(window).on('load', function() {
 
   /*Page Loader active
     ========================================================*/
-    $('#preloader').fadeOut();
+    
 
   // Sticky Nav
     $(window).on('scroll', function() {
