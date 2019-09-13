@@ -9,4 +9,7 @@
     #pranav_b_abt, #a_g_abt{
 		display:none;
 	}
+	.psl_banner_registernow{
+		z-index:100;
+	}
 } 

@@ -1,3 +1,5 @@
+import './polyfills';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -59,6 +61,9 @@ import { HowToPlayComponent } from './how-to-play/how-to-play.component';
 import { LegalityComponent } from './legality/legality.component';
 import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
 import { PrintNewsComponent } from './print-news/print-news.component';
+import {MatNativeDateModule} from '@angular/material/core';
+import {DemoMaterialModule} from './material-module';
+import {MatSortModule} from '@angular/material/sort';
 
 const config = new AuthServiceConfig([
   {
@@ -134,7 +139,10 @@ export function provideConfig() {
     BsDatepickerModule.forRoot(),
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    StorageServiceModule
+    StorageServiceModule,
+    MatNativeDateModule,
+    DemoMaterialModule,
+    MatSortModule
   ],
   providers: [AuthenticationService, AuthGuardService, DataService,
     {

@@ -24,7 +24,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="stylesheet" href="assets/css/fontawesome-all.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
- 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
     <!-- Responsive Style -->
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
 
@@ -111,6 +111,13 @@
             });
             $("#manish_t").on("show.bs.collapse", function() {
                 $("#manish_t_toggle").html('<span style="color:blue;">Less</span> ');
+            });
+            
+            $("#amit_burman").on("hide.bs.collapse", function() {
+                $("#amit_b_toggle").html('<span style="color:blue;">Read more</span>');
+            });
+            $("#amit_burman").on("show.bs.collapse", function() {
+                $("#amit_b_toggle").html('<span style="color:blue;">Less</span> ');
             });
 
         });

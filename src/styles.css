@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url("https://fonts.googleapis.com/css?family=Lato:400|Josefin+Sans:700");
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
 html {
     overflow-x: hidden;
 }
@@ -3890,3 +3892,12 @@ header.fixed .header_bottom {
       color: #fff !important;
   }
 /*--news styles--*/
+.basic-container {
+  padding: 30px;
+}
+
+.version-info {
+  font-size: 8pt;
+  float: right;
+}
+

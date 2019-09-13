@@ -1,8 +1,12 @@
 @media only screen and (max-width: 800px) {
 	.icon-logo{
-		display:none;
+		display: none;
 	}
-
+	.icon-logo-top-head{
+		width: 11%;
+		float: left;
+		padding-left: 10px;
+	}
 	.navbar {
         background: none;
     }
@@ -20,5 +24,8 @@
 	.icon-logo{
 		width: 5%;
 		margin: 10px 10px 10px 50px;
+	}
+	.icon-logo-top-head{
+		display: none;
 	}
 } 
