@@ -84,14 +84,14 @@ export class AuthenticationService {
 
   public register(user: TokenPayload): Observable<any> {
       //console.log(user);
-      return this.http.post(`http://localhost/register/public/api/register`, user, {
+      return this.http.post(`http://13.235.100.96:82/api/register`, user, {
         headers: {'Content-Type': 'application/json'}
       })
   }
 
   public login(user: TokenPayload): Observable<any> {
     const base = this.http.post(
-        `http://localhost/register/public/api/login`, 
+        `http://13.235.100.96:82/api/login`, 
         {   email: user.email, password: user.password}, 
         {
             headers: {'Content-Type': 'application/json'}
@@ -112,7 +112,7 @@ export class AuthenticationService {
   }
 
   public profile(): Observable<any> {
-    return this.http.get(`http://localhost/register/public/api/profile`, {
+    return this.http.get(`http://13.235.100.96:82/api/profile`, {
         headers: {Authorization: `Bearer ${this.getToken()}`}
     })
   }
@@ -128,7 +128,7 @@ export class AuthenticationService {
   public getStates(): Observable<any> {
     // console.log(user)
    
-     return this.http.get('http://localhost/register/public/api/state',  {
+     return this.http.get('http://13.235.100.96:82/api/state',  {
        headers: {'Content-Type': 'application/json'}
      }).pipe(
       catchError(this.handleError)
@@ -138,24 +138,24 @@ export class AuthenticationService {
  public getCities(stateId: number): Observable<any> {
  
    //console.log("statedid====="+stateId)
-   return this.http.get('http://localhost/register/public/api/city/'+stateId,
+   return this.http.get('http://13.235.100.96:82/api/city/'+stateId,
     { headers: {'Content-Type': 'application/json'}
    }).pipe(
     catchError(this.handleError)
   );
 }
  public fp(f): Observable<any> {
-  return this.http.post(`http://localhost/register/public/api/forgetpw`, f, {
+  return this.http.post(`http://13.235.100.96:82/api/forgetpw`, f, {
     headers: {'Content-Type': 'application/json'}
   });
 }
  public otpfunc(f): Observable<any> {
-  return this.http.post(`http://localhost/register/public/api/verify_otp`, f, {
+  return this.http.post(`http://13.235.100.96:82/api/verify_otp`, f, {
     headers: {'Content-Type': 'application/json'}
   });
 }
  public rpfunc(f): Observable<any> {
-  return this.http.post(`http://localhost/register/public/api/reset_password`, f, {
+  return this.http.post(`http://13.235.100.96:82/api/reset_password`, f, {
     headers: {'Content-Type': 'application/json'}
   });
 }
@@ -163,24 +163,24 @@ export class AuthenticationService {
  public sociallogin(user): Observable<any> {
  
    //console.log("statedid====="+stateId)
-  // return this.http.post('http://localhost/register/public/api/social/',
+  // return this.http.post('http://13.235.100.96:82/api/social/',
   //  { headers: {'Content-Type': 'application/json'}
   // }).pipe(
   //  catchError(this.handleError)
   //);
 
-  return this.http.post(`http://localhost/register/public/api/social`, user, {
+  return this.http.post(`http://13.235.100.96:82/api/social`, user, {
         headers: {'Content-Type': 'application/json'}
       });
 }
 
 public sendotp(f): Observable<any> {
-  return this.http.post(`http://localhost/register/public/api/send_otp`, f, {
+  return this.http.post(`http://13.235.100.96:82/api/send_otp`, f, {
     headers: {'Content-Type': 'application/json'}
   });
 }
 public up_register(f): Observable<any> {
-  return this.http.post(`http://localhost/register/public/api/psl_register`, f, {
+  return this.http.post(`http://13.235.100.96:82/api/psl_register`, f, {
     headers: {'Content-Type': 'application/json'}
   });
 }
